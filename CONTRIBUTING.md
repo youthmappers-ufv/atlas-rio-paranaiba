@@ -40,7 +40,7 @@ Coordenadas em graus decimais (WGS 84), com ponto: `-19.1965`.
 
 ## 5. Atualizar o motor
 
-Quando sair uma versão nova do atlas-motor: `python ../atlas-motor/scripts/atualizar_motor.py --versao vX.Y` (troca no `atlas.toml` e nos workflows), num PR próprio, `[CONFIG] Motor vX.Y`. Leia o `CHANGELOG.md` do motor antes.
+Quando sair uma versão nova do atlas-motor: `python ../atlas-motor/scripts/atualizar_motor.py --versao vX.Y.Z` (troca no `atlas.toml` e nos workflows), num PR próprio, `[CONFIG] Motor vX.Y.Z`. Leia o `CHANGELOG.md` do motor antes.
 
 ## 6. Edições do atlas
 

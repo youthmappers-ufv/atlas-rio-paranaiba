@@ -13,4 +13,4 @@ permissions:
 
 jobs:
   atualizar:
-    uses: youthmappers-ufv/atlas-motor/.github/workflows/atualizar-dados.yml@v1.1
+    uses: youthmappers-ufv/atlas-motor/.github/workflows/atualizar-dados.yml@v0.2.0

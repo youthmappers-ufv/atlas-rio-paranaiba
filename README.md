@@ -24,7 +24,7 @@ docs/decisoes.md  decisões do município (etiquetas, fontes, temas)
 
 ## Uso local
 
-Clone o `atlas-motor` **ao lado** deste repositório, na mesma versão do `atlas.toml` (`git -C ../atlas-motor checkout v1.0`). Requisitos: Python 3.11+, `pip install -r ../atlas-motor/requirements.txt` e [Quarto](https://quarto.org).
+Clone o `atlas-motor` **ao lado** deste repositório, na mesma versão do `atlas.toml` (`git -C ../atlas-motor checkout v0.2.0`). Requisitos: Python 3.11+, `pip install -r ../atlas-motor/requirements.txt` e [Quarto](https://quarto.org).
 
 ```bash
 python ../atlas-motor/scripts/validar.py                        # 0 erros antes de qualquer PR
