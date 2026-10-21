@@ -94,7 +94,7 @@ def feicoes(bruto: dict, aneis: list) -> list[dict]:
 def gravar_geojson(arquivo: Path, lista: list[dict]) -> None:
     # Uma feição por linha: diffs do Git mostram exatamente o que mudou.
     linhas = ",\n".join(json.dumps(f, ensure_ascii=False, separators=(",", ":")) for f in lista)
-    arquivo.write_text('{"type":"FeatureCollection","features":[\n' + linhas + "\n]}\n", encoding="utf-8")
+    arquivo.write_text('{"type":"FeatureCollection","features":[\n' + linhas + "\n]}\n", encoding="utf-8", newline="\n")
 
 
 def main() -> int:

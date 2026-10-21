@@ -56,7 +56,8 @@ def ler_csv(arquivo: Path) -> tuple[list[str], list[dict]]:
 
 def escrever_json(arquivo: Path, dados) -> None:
     arquivo.parent.mkdir(parents=True, exist_ok=True)
-    arquivo.write_text(json.dumps(dados, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+    # Fim de linha LF também no Windows: o mesmo retrato gera o mesmo arquivo em qualquer sistema.
+    arquivo.write_text(json.dumps(dados, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8", newline="\n")
 
 
 # ---------------------------------------------------------------- Geometria
