@@ -1,0 +1,53 @@
+# Verifica a integridade de cada contribuição.
+# Roda em todo pull request e em todo push na main:
+#  1. testes dos scripts (biblioteca padrão, rápido);
+#  2. validação do repositório (scripts/validar.py);
+#  3. construção do atlas em HTML, para garantir que o site continua gerando.
+# Num repositório privado do plano gratuito não dá para EXIGIR que passe antes do
+# merge (proteção de branch); a regra combinada é só mesclar PR com tudo verde.
+name: Verificar
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verificar-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  integridade:
+    name: Testes e validação
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Testes dos scripts
+        run: python -m unittest discover -s testes -v
+      - name: Validação do repositório
+        run: python scripts/validar.py
+
+  construir:
+    name: Construção do site
+    needs: integridade
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - run: pip install -r requirements.txt
+      - name: Indicadores, mapas e trechos das pranchas
+        run: python scripts/construir.py
+      - uses: quarto-dev/quarto-actions/setup@v2
+      - name: Renderizar o site (HTML)
+        run: quarto render atlas --to html

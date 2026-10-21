@@ -1,0 +1,60 @@
+# Atualiza o retrato do OpenStreetMap e propõe a mudança por pull request.
+# Roda no dia 1 de cada mês e pelo botão "Run workflow".
+# O PR mostra, arquivo por arquivo, o que mudou no mapa; alguém da equipe revisa e mescla.
+# Requer, em Settings > Actions > General: "Allow GitHub Actions to create and approve
+# pull requests". PRs abertos pelo GITHUB_TOKEN não disparam o workflow Verificar;
+# por isso a validação roda aqui mesmo, antes de abrir o PR.
+name: Atualizar dados do OSM
+
+on:
+  schedule:
+    - cron: "0 9 1 * *"        # dia 1, 9h UTC (6h em Brasília)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: atualizar-dados
+  cancel-in-progress: false
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Baixar o retrato do OSM
+        run: python scripts/baixar_osm.py
+      - name: Validar
+        run: python scripts/validar.py
+      - name: Abrir pull request, se algo mudou
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ -z "$(git status --porcelain -- dados/osm)" ]; then
+            echo "Nada mudou no OSM desde o último retrato."
+            exit 0
+          fi
+          base=$(python -c "import json; print(json.load(open('dados/osm/retrato.json'))['base_osm'][:10])")
+          ramo="dados/osm-$base"
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898273+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$ramo"
+          git add dados/osm
+          git commit -m "[DADOS] Retrato do OSM de $base"
+          git push --force -u origin "$ramo"
+          {
+            echo "Retrato mensal do OpenStreetMap (base de $base), gerado por scripts/baixar_osm.py e já validado."
+            echo
+            echo '```'
+            git diff --stat HEAD~1 -- dados/osm | tail -n 15
+            echo '```'
+            echo
+            echo "Revise as mudanças (feições novas, removidas ou alteradas) antes de mesclar."
+          } > corpo-pr.md
+          gh pr create --base main --head "$ramo" --title "[DADOS] Retrato do OSM de $base" --body-file corpo-pr.md \
+            || echo "Já existe um PR aberto para este ramo."
