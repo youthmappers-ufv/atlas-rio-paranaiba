@@ -1,0 +1,40 @@
+# Gera o site e o PDF do atlas e publica em youthmappers-ufv/atlas, na pasta deste município.
+#  - tag v* (ex.: v1.0): edição numerada, em /<slug>/edicoes/<tag>/ e como versão principal,
+#    com release (privado) do PDF neste repositório;
+#  - dia 5 de cada mês: versão principal a partir da main;
+#  - botão "Run workflow": qualquer branch, tag ou commit, com dados versionados ou atuais.
+# Requer o segredo ATLAS_CHAVE_PUBLICACAO (chave de deploy do repositório público).
+name: Publicar atlas
+
+on:
+  push:
+    tags: ["v*"]
+  schedule:
+    - cron: "0 9 5 * *"
+  workflow_dispatch:
+    inputs:
+      versao:
+        description: "Branch, tag ou commit a publicar"
+        default: main
+        required: true
+      dados_atuais:
+        description: "Baixar os dados atuais do OSM na hora (em vez dos versionados)"
+        type: boolean
+        default: false
+      destino:
+        description: "Onde publicar"
+        type: choice
+        options: [principal, edicao]
+        default: principal
+
+permissions:
+  contents: write
+
+jobs:
+  publicar:
+    uses: youthmappers-ufv/atlas-motor/.github/workflows/publicar.yml@v1.0
+    with:
+      versao: ${{ inputs.versao || '' }}
+      dados_atuais: ${{ inputs.dados_atuais || false }}
+      destino: ${{ inputs.destino || '' }}
+    secrets: inherit

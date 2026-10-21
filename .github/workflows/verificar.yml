@@ -1,0 +1,16 @@
+# Verifica cada contribuição com o atlas-motor (testes de integridade e construção do site).
+# A versão depois do @ deve ser a mesma de motor.versao no atlas.toml (o validador confere).
+name: Verificar
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verificar:
+    uses: youthmappers-ufv/atlas-motor/.github/workflows/verificar.yml@v1.0

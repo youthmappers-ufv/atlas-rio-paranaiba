@@ -1,0 +1,16 @@
+# Retrato mensal do OpenStreetMap, proposto por pull request (dia 1 de cada mês ou manual).
+# Requer em Settings > Actions > General: "Allow GitHub Actions to create and approve pull requests".
+name: Atualizar dados do OSM
+
+on:
+  schedule:
+    - cron: "0 9 1 * *"        # dia 1, 9h UTC (6h em Brasília)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  atualizar:
+    uses: youthmappers-ufv/atlas-motor/.github/workflows/atualizar-dados.yml@v1.0

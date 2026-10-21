@@ -1,11 +1,7 @@
 # Gerados (reconstruídos a cada execução)
-atlas/_gerado/
-atlas/_site/
-atlas/.quarto/
-_freeze/
+_construcao/
 __pycache__/
-*.pyc
-.venv/
+.quarto/
 
 # Sistema e editores
 .DS_Store
