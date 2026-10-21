@@ -1,0 +1,52 @@
+# Conferência em campo: um registro por item verificado (escola, unidade de saúde, praça...).
+descricao = "Registros da conferência em campo e do resultado no OpenStreetMap"
+arquivo = "levantamentos-campo.csv"
+chave = "id"
+
+[[coluna]]
+nome = "id"
+tipo = "texto"
+obrigatoria = true
+padrao = '^LC-\d{4}-\d{3}$'          # LC-ano-sequência, ex.: LC-2027-001
+
+[[coluna]]
+nome = "data"
+tipo = "data"                        # AAAA-MM-DD
+obrigatoria = true
+
+[[coluna]]
+nome = "tema"
+tipo = "tema"                        # id existente em temas.toml
+obrigatoria = true
+
+[[coluna]]
+nome = "item"
+tipo = "texto"
+obrigatoria = true                   # o que foi conferido, ex.: "E.E. Major Silvestre"
+
+[[coluna]]
+nome = "situacao"
+tipo = "lista"
+obrigatoria = true
+valores = ["confirmado", "corrigido-no-osm", "acrescentado-ao-osm", "inexistente", "pendente"]
+
+[[coluna]]
+nome = "osm"
+tipo = "texto"
+padrao = '^(node|way|relation)/\d+$' # objeto do OSM, ex.: way/448755299
+
+[[coluna]]
+nome = "changeset"
+tipo = "inteiro"                     # conjunto de alterações, quando houve edição
+
+[[coluna]]
+nome = "lat"
+tipo = "latitude"
+
+[[coluna]]
+nome = "lon"
+tipo = "longitude"
+
+[[coluna]]
+nome = "observacao"
+tipo = "texto"

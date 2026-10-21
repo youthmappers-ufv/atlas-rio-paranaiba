@@ -1,0 +1,49 @@
+# Calendário de festas e eventos (prancha 9, proposta à Secretaria de Cultura, Turismo e Lazer).
+descricao = "Festas e eventos culturais, religiosos e esportivos do município"
+arquivo = "eventos-culturais.csv"
+chave = "id"
+
+[[coluna]]
+nome = "id"
+tipo = "texto"
+obrigatoria = true
+padrao = '^EV-\d{3}$'
+
+[[coluna]]
+nome = "nome"
+tipo = "texto"
+obrigatoria = true
+
+[[coluna]]
+nome = "tipo"
+tipo = "lista"
+obrigatoria = true
+valores = ["festa-religiosa", "festa-popular", "evento-esportivo", "feira", "exposicao", "outro"]
+
+[[coluna]]
+nome = "mes"
+tipo = "inteiro"
+obrigatoria = true
+minimo = 1
+maximo = 12
+
+[[coluna]]
+nome = "local"
+tipo = "texto"
+
+[[coluna]]
+nome = "lat"
+tipo = "latitude"
+
+[[coluna]]
+nome = "lon"
+tipo = "longitude"
+
+[[coluna]]
+nome = "fonte"
+tipo = "texto"
+obrigatoria = true                   # quem informou ou onde foi publicado (nunca dado pessoal)
+
+[[coluna]]
+nome = "url"
+tipo = "url"

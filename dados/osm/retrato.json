@@ -1,0 +1,54 @@
+{
+ "base_osm": "2026-10-21T20:01:36Z",
+ "gerado_em": "2026-10-21T20:08:47Z",
+ "municipio": "Rio Paranaíba",
+ "relacao": 314621,
+ "servidor": "https://overpass-api.de/api/interpreter",
+ "temas": {
+  "area-rural": {
+   "base_osm": "2026-10-21T20:06:38Z",
+   "consulta_sha256": "f428eb23f1ac3744",
+   "feicoes": 3621
+  },
+  "cultura-turismo": {
+   "base_osm": "2026-10-21T20:07:38Z",
+   "consulta_sha256": "15af4b4c39582531",
+   "feicoes": 85
+  },
+  "educacao": {
+   "base_osm": "2026-10-21T20:03:36Z",
+   "consulta_sha256": "5c7f5f690ae0e3c3",
+   "feicoes": 9
+  },
+  "equipamentos": {
+   "base_osm": "2026-10-21T20:04:36Z",
+   "consulta_sha256": "b07e8f5be20fad6e",
+   "feicoes": 53
+  },
+  "localizacao": {
+   "base_osm": "2026-10-21T20:02:36Z",
+   "consulta_sha256": "7317ec533aa64607",
+   "feicoes": 6
+  },
+  "meio-ambiente": {
+   "base_osm": "2026-10-21T20:04:36Z",
+   "consulta_sha256": "18b6201258d3d67d",
+   "feicoes": 527
+  },
+  "mobilidade": {
+   "base_osm": "2026-10-21T20:05:36Z",
+   "consulta_sha256": "11e024446913e039",
+   "feicoes": 36
+  },
+  "saude": {
+   "base_osm": "2026-10-21T20:04:36Z",
+   "consulta_sha256": "424b88217605059e",
+   "feicoes": 9
+  },
+  "sistema-viario": {
+   "base_osm": "2026-10-21T20:02:36Z",
+   "consulta_sha256": "859a3115ab08eb2b",
+   "feicoes": 4776
+  }
+ }
+}
