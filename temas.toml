@@ -1,0 +1,91 @@
+# Pranchas do atlas. Cada tema tem:
+#   id          identificador curto (nome dos arquivos de dados, consulta e prancha)
+#   numero      ordem da prancha
+#   titulo      título da prancha
+#   situacao    planejado | em-andamento | publicado
+#   consulta    arquivo em consultas/ (Overpass QL; {{bbox}} é substituído pela caixa do município)
+#   referencia  base oficial em dados/oficiais/ usada na completude, ou "interno"
+#   recorte     municipio | sede | ambos (mapas gerados para a prancha)
+# Uma prancha em situação diferente de "planejado" precisa de atlas/pranchas/<numero>-<id>.qmd.
+
+[[tema]]
+id = "localizacao"
+numero = 1
+titulo = "Localização e limites"
+situacao = "em-andamento"
+consulta = "localizacao.overpassql"
+referencia = "interno"
+recorte = "municipio"
+
+[[tema]]
+id = "sistema-viario"
+numero = 2
+titulo = "Sistema viário"
+situacao = "planejado"
+consulta = "sistema-viario.overpassql"
+referencia = "interno"
+recorte = "ambos"
+
+[[tema]]
+id = "educacao"
+numero = 3
+titulo = "Educação"
+situacao = "em-andamento"
+consulta = "educacao.overpassql"
+referencia = "inep"
+recorte = "ambos"
+
+[[tema]]
+id = "saude"
+numero = 4
+titulo = "Saúde"
+situacao = "planejado"
+consulta = "saude.overpassql"
+referencia = "cnes"
+recorte = "ambos"
+
+[[tema]]
+id = "equipamentos"
+numero = 5
+titulo = "Equipamentos e serviços públicos"
+situacao = "planejado"
+consulta = "equipamentos.overpassql"
+referencia = "interno"
+recorte = "sede"
+
+[[tema]]
+id = "meio-ambiente"
+numero = 6
+titulo = "Meio ambiente"
+situacao = "planejado"
+consulta = "meio-ambiente.overpassql"
+referencia = "interno"
+recorte = "municipio"
+
+[[tema]]
+id = "mobilidade"
+numero = 7
+titulo = "Mobilidade e acessibilidade"
+situacao = "planejado"
+consulta = "mobilidade.overpassql"
+referencia = "interno"
+recorte = "sede"
+
+[[tema]]
+id = "area-rural"
+numero = 8
+titulo = "Área rural"
+situacao = "planejado"
+consulta = "area-rural.overpassql"
+referencia = "interno"
+recorte = "municipio"
+
+[[tema]]
+# Proposta à Secretaria de Cultura, Turismo e Lazer (outubro de 2026); depende da parceria.
+id = "cultura-turismo"
+numero = 9
+titulo = "Cultura, turismo e lazer"
+situacao = "planejado"
+consulta = "cultura-turismo.overpassql"
+referencia = "interno"
+recorte = "ambos"

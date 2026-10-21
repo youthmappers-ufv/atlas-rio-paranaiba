@@ -1,0 +1,37 @@
+# Configuração do Atlas Colaborativo do Município — Rio Paranaíba (MG)
+# Projeto de extensão EXT-ATLAS do Programa Youthmappers UFV (RAEX PRJ-211/2026).
+# Lida por todos os scripts de scripts/. Mudanças aqui passam por pull request.
+
+[municipio]
+nome = "Rio Paranaíba"
+uf = "MG"
+ibge = "3155504"
+osm_relacao = 314621          # limite municipal no OpenStreetMap (admin_level=8)
+wikidata = "Q22065225"
+# Caixas envolventes: [sul, oeste, norte, leste], em graus (WGS 84)
+bbox = [-19.447, -46.54, -19.045, -46.0817]
+sede_bbox = [-19.2115, -46.2600, -19.1815, -46.2265]
+
+[hashtags]
+# Toda edição no OSM feita para o atlas leva as duas, sempre juntas.
+programa = "#youthmappersufv"
+projeto = "#ymufv-atlas"
+
+[overpass]
+# Tentados em ordem; o primeiro que responder é usado e fica registrado no retrato.
+servidores = [
+  "https://overpass-api.de/api/interpreter",
+  "https://overpass.openstreetmap.fr/api/interpreter",
+  "https://overpass.private.coffee/api/interpreter",
+]
+tempo_limite = 240            # segundos por consulta
+
+[completude]
+# Correspondência entre item oficial e objeto do OSM (seção de indicadores da proposta).
+distancia_max_m = 150
+similaridade_min = 0.6
+
+[publicacao]
+repositorio = "youthmappers-ufv/atlas"           # repositório público só de saída
+url = "https://youthmappers-ufv.github.io/atlas/"
+atribuicao = "© colaboradores do OpenStreetMap (ODbL)"

@@ -1,0 +1,13 @@
+# Gerados (reconstruídos a cada execução)
+atlas/_gerado/
+atlas/_site/
+atlas/.quarto/
+_freeze/
+__pycache__/
+*.pyc
+.venv/
+
+# Sistema e editores
+.DS_Store
+Thumbs.db
+*.swp
