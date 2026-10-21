@@ -1,0 +1,2 @@
+# Só para gerar os mapas (scripts/mapas.py). Validação e testes usam só a biblioteca padrão.
+matplotlib>=3.8
