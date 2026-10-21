@@ -1,0 +1,6 @@
+# 1. Localização e limites {.unnumbered}
+
+<!-- Texto da prancha: escrito pela equipe; os mapas e indicadores vêm de _gerado/. -->
+Rio Paranaíba fica no Alto Paranaíba, em Minas Gerais. O mapa mostra o limite do município no OpenStreetMap, a sede e os povoados e localidades registrados.
+
+{{< include ../_gerado/localizacao.md >}}

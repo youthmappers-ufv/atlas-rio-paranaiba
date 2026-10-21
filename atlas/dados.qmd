@@ -1,0 +1,7 @@
+# Dados para download {.unnumbered}
+
+Os dados de cada prancha estão em GeoJSON (abre no QGIS e em sites de mapas), na mesma versão usada nesta edição do atlas.
+
+{{< include _gerado/downloads.md >}}
+
+Licença: os dados derivados do OpenStreetMap seguem a [Open Database License (ODbL)](https://opendatacommons.org/licenses/odbl/); cite *© colaboradores do OpenStreetMap*.

@@ -1,0 +1,6 @@
+# Como o atlas é feito {.unnumbered}
+
+1. **Extração.** Os dados de cada tema são consultados no OpenStreetMap pela API Overpass e recortados pelo limite do município. Cada extração fica registrada com a data da base do OpenStreetMap.
+2. **Completude.** Nos temas com base oficial (escolas, no Catálogo de Escolas do INEP; saúde, no CNES), mede-se a proporção de itens oficiais que têm correspondente no mapa, a até 150 metros e com nome semelhante, e a proporção dos correspondidos com nome e endereço. Nos demais temas, usam-se indicadores internos, como a proporção de vias com o tipo de pavimento informado.
+3. **Mapeamento.** Estudantes e voluntários conferem em campo os itens divergentes e corrigem o mapa, sempre manualmente e com as hashtags `#youthmappersufv #ymufv-atlas` nas edições. As bases oficiais servem só para conferência: nada é copiado delas para o mapa.
+4. **Publicação.** O atlas é gerado de novo a cada mês, com os dados atualizados, e cada edição numerada fica disponível para consulta.
