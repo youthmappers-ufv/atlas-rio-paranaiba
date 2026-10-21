@@ -1,61 +1,37 @@
-# Atlas Colaborativo de Rio Paranaíba
+# Atlas Colaborativo de Rio Paranaíba (MG)
 
-Repositório **operacional** do projeto de extensão *Atlas Colaborativo do Município* (EXT-ATLAS, RAEX PRJ-211/2026), do Programa Youthmappers UFV. Aqui ficam os dados, as consultas, os scripts e os textos que geram o atlas, como **site** e como **PDF**.
+Repositório do atlas de **Rio Paranaíba** (IBGE 3155504), do Programa Youthmappers UFV. Guarda só o que é deste município: configuração, dados e textos. O código e a estrutura comuns ficam no [atlas-motor](https://github.com/youthmappers-ufv/atlas-motor), na versão declarada em `atlas.toml` (`motor.versao`).
 
-| Repositório | Visibilidade | O que guarda |
-|---|---|---|
-| `youthmappers-ufv/atlas-rio-paranaiba` (este) | privado: coordenador e estudante | dados, consultas, scripts, textos das pranchas, CI |
-| `youthmappers-ufv/atlas` | público | **só o resultado**: site e PDF gerados por `publicar.yml` ([youthmappers-ufv.github.io/atlas](https://youthmappers-ufv.github.io/atlas/)) |
-| `youthmappers-ufv/youthmappers-ufv-docs` | privado | parte institucional: proposta, relatórios à UFV, bibliografia, divulgação, orientação do estudante (`projetos/ext-atlas/`) |
-
-A maior parte do mapeamento vai para o próprio **OpenStreetMap**; este repositório guarda o que o atlas precisa além disso.
+- **Site e PDF publicados:** https://youthmappers-ufv.github.io/atlas/rio-paranaiba/
+- **Hashtags nas edições do OSM:** `#youthmappersufv #ymufv-atlas` (sempre juntas)
+- **Projeto:** extensão *Atlas Colaborativo do Município* (EXT-ATLAS, RAEX PRJ-211/2026). A parte institucional (proposta, relatórios à UFV, bibliografia, orientação do estudante) fica em `youthmappers-ufv/youthmappers-ufv-docs`, pasta `projetos/ext-atlas/`.
 
 ## Estrutura
 
 ```
-atlas.toml              município, hashtags, servidores Overpass, parâmetros de completude, publicação
-temas.toml              pranchas: id, número, título, situação, consulta, base de referência, recorte
-consultas/              uma consulta Overpass por tema ({{bbox}} = caixa do município)
+atlas.toml        município, versão do motor, hashtags, publicação
+temas.toml        situação de cada prancha do catálogo do motor (e pranchas próprias)
+consultas/        consultas Overpass próprias (opcional; substituem as do catálogo)
 dados/
-  osm/                  retrato do OSM: limite.geojson, <tema>.geojson, retrato.json (data da base)
-  oficiais/<base>/      bases oficiais (INEP, CNES, Prefeitura) + fonte.toml  → dados/oficiais/LEIAME.md
-  curados/              dados levantados pela equipe (CSV)
-  esquemas/             esquema de cada CSV de curados/ (colunas, tipos, valores)
-scripts/
-  baixar_osm.py         baixa o retrato do OSM
-  validar.py            integridade do repositório (o CI roda em todo PR)
-  indicadores.py        completude C_t e Q_t; indicadores internos
-  mapas.py              mapas das pranchas (matplotlib)
-  construir.py          prepara tudo para o Quarto (atlas/_gerado/)
-atlas/                  livro Quarto: site e PDF (pranchas/<nn>-<tema>.qmd com o texto da equipe)
-testes/                 testes dos scripts, com defeitos plantados numa cópia
-docs/                   configuração do GitHub e decisões
-.github/                workflows (verificar, atualizar-dados, publicar) e modelos de issue e PR
+  osm/            retrato do OSM (gerado; não editar à mão)
+  oficiais/       bases oficiais (INEP, CNES, Prefeitura), cada uma com fonte.toml
+  curados/        dados levantados pela equipe (CSV, esquemas no catálogo do motor)
+  esquemas/       esquemas próprios deste município (opcional)
+atlas/            textos: index.qmd (apresentação) e pranchas/<nn>-<tema>.qmd
+docs/decisoes.md  decisões do município (etiquetas, fontes, temas)
+.github/          workflows que chamam o motor; modelos de issue e PR
 ```
 
 ## Uso local
 
-Requisitos: Python 3.11+, `pip install -r requirements.txt` (só o matplotlib) e [Quarto](https://quarto.org). Para o PDF, uma distribuição LaTeX (TinyTeX: `quarto install tinytex`, ou MiKTeX).
+Clone o `atlas-motor` **ao lado** deste repositório, na mesma versão do `atlas.toml` (`git -C ../atlas-motor checkout v1.0`). Requisitos: Python 3.11+, `pip install -r ../atlas-motor/requirements.txt` e [Quarto](https://quarto.org).
 
 ```bash
-python scripts/validar.py                    # 0 erros antes de qualquer PR
-python -m unittest discover -s testes        # testes dos scripts
-python scripts/baixar_osm.py                 # novo retrato do OSM (ou deixe o CI fazer, todo mês)
-python scripts/construir.py                  # indicadores, mapas e trechos das pranchas
-quarto render atlas                          # site e PDF em atlas/_site/
-quarto preview atlas                         # site no navegador, atualizando ao salvar
+python ../atlas-motor/scripts/validar.py                        # 0 erros antes de qualquer PR
+python ../atlas-motor/scripts/baixar_osm.py                     # retrato novo do OSM
+python ../atlas-motor/scripts/ativar_tema.py educacao           # abre uma prancha
+python ../atlas-motor/scripts/construir.py --renderizar html    # site em _construcao/livro/_site/
+python ../atlas-motor/scripts/construir.py --renderizar todos   # site e PDF
 ```
 
-## Fluxo de trabalho
-
-Tudo entra por **pull request**, com o workflow *Verificar* verde e revisão do coordenador; os procedimentos de cada tipo de contribuição estão em [CONTRIBUTING.md](CONTRIBUTING.md). Edições no OpenStreetMap levam sempre `#youthmappersufv #ymufv-atlas`.
-
-| Workflow | Quando | O que faz |
-|---|---|---|
-| Verificar | todo PR e push na `main` | testes, `validar.py`, construção do site |
-| Atualizar dados do OSM | dia 1 de cada mês, ou manual | baixa o retrato, valida e abre PR com as diferenças |
-| Publicar atlas | tag `v*`, dia 5 de cada mês, ou manual | gera site e PDF e publica em `youthmappers-ufv/atlas` (principal ou `/edicoes/<tag>/`) |
-
-**Edições numeradas:** uma tag `vX.Y` na `main` publica a edição com os dados versionados naquele commit (ex.: `v1.0` = atlas web v.1, pranchas 1 a 4). Com o botão manual, dá para publicar qualquer branch, tag ou commit, com os dados versionados ou baixados na hora.
-
-Configuração inicial dos repositórios, do acesso e da chave de publicação: [docs/configuracao-github.md](docs/configuracao-github.md). Licenças: [LICENCAS.md](LICENCAS.md).
+Procedimentos de contribuição: [CONTRIBUTING.md](CONTRIBUTING.md). Configuração no GitHub: `docs/configuracao-github.md` do atlas-motor.
