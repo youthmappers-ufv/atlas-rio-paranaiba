@@ -10,7 +10,7 @@ on:
   push:
     tags: ["v*"]
   schedule:
-    - cron: "0 9 5 * *"
+    - cron: "25 8 5 * *"      # dia 5; horário próprio do município (atlas-motor v0.2.1)
   workflow_dispatch:
     inputs:
       versao:
@@ -32,7 +32,7 @@ permissions:
 
 jobs:
   publicar:
-    uses: youthmappers-ufv/atlas-motor/.github/workflows/publicar.yml@v0.2.0
+    uses: youthmappers-ufv/atlas-motor/.github/workflows/publicar.yml@v0.2.1
     with:
       versao: ${{ inputs.versao || '' }}
       dados_atuais: ${{ inputs.dados_atuais || false }}

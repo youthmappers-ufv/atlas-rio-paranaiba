@@ -13,4 +13,4 @@ permissions:
 
 jobs:
   verificar:
-    uses: youthmappers-ufv/atlas-motor/.github/workflows/verificar.yml@v0.2.0
+    uses: youthmappers-ufv/atlas-motor/.github/workflows/verificar.yml@v0.2.1

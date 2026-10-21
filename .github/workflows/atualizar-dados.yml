@@ -4,7 +4,7 @@ name: Atualizar dados do OSM
 
 on:
   schedule:
-    - cron: "0 9 1 * *"        # dia 1, 9h UTC (6h em Brasília)
+    - cron: "25 8 1 * *"      # dia 1; horário próprio do município (atlas-motor v0.2.1)
   workflow_dispatch:
 
 permissions:
@@ -13,4 +13,4 @@ permissions:
 
 jobs:
   atualizar:
-    uses: youthmappers-ufv/atlas-motor/.github/workflows/atualizar-dados.yml@v0.2.0
+    uses: youthmappers-ufv/atlas-motor/.github/workflows/atualizar-dados.yml@v0.2.1
