@@ -19,6 +19,7 @@ dados/
   curados/        dados levantados pela equipe (CSV, esquemas no catálogo do motor)
   esquemas/       esquemas próprios deste município (opcional)
 atlas/            textos: index.qmd (apresentação) e pranchas/<nn>-<tema>.qmd
+tema/             identidade visual própria (opcional): _brand.yml e logos; sem ela, a do programa
 .github/          workflows que chamam o motor; modelos de issue e PR
 ```
 

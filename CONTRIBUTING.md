@@ -48,10 +48,14 @@ Coordenadas em graus decimais (WGS 84), com ponto: `-19.1965`.
 - O texto da prancha é da equipe; mapas, indicadores e lacunas entram pelo `include`, gerados pelo motor.
 - Veja o resultado com `python ../atlas-motor/scripts/construir.py --previa`: abre o site no navegador e recarrega a cada texto salvo em `atlas/`. Mudou dados, `temas.toml` ou `atlas.toml`? Rode `construir.py` de novo (pode ser com a prévia aberta, em outro terminal). Para o site completo em arquivo, `--renderizar html`.
 
-## 5. Atualizar o motor
+## 5. Identidade visual (`tema/`)
+
+Sem `tema/_brand.yml`, o atlas usa a identidade do Programa Youthmappers UFV. Para usar a da prefeitura parceira (cores, fontes, logos no site e no PDF), siga o [tema/LEIAME.md](tema/LEIAME.md). O uso da marca da prefeitura depende de autorização dela, registrada no termo de parceria. O validador confere as cores, os logos citados e o formato real das imagens.
+
+## 6. Atualizar o motor
 
 Quando sair uma versão nova do atlas-motor: `python ../atlas-motor/scripts/atualizar_motor.py --versao vX.Y.Z` (troca no `atlas.toml` e nos workflows), num PR próprio, `[CONFIG] Motor vX.Y.Z`. Leia o `CHANGELOG.md` do motor antes.
 
-## 6. Edições do atlas
+## 7. Edições do atlas
 
 A coordenação cria a tag (`git tag v1.0 && git push origin v1.0`) quando uma etapa se fecha. O workflow *Publicar atlas* gera site e PDF daquela versão, publica em `edicoes/v1.0/` e como versão principal (se `publicacao.hospedagem = "pages"`) e anexa o PDF a um release.
