@@ -1,0 +1,74 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Atlas Colaborativo de Rio Paranaíba",
+    "section": "",
+    "text": "Apresentação\nO Atlas Colaborativo de Rio Paranaíba reúne mapas temáticos do município feitos a partir do OpenStreetMap, o mapa livre mantido por voluntários do mundo todo. Cada prancha mostra o que já está no mapa, mede o quanto ele está completo em relação às bases oficiais e aponta as lacunas, que estudantes e comunidade completam em campo e em mapatonas.\nVersão v0.1.0 (motor v0.11.0), com dados do OpenStreetMap de 2026-10-21.\nBaixar o atlas completo em PDF\nO atlas é produzido pelo projeto de extensão Atlas Colaborativo do Município (RAEX PRJ-211/2026), do Programa Youthmappers UFV, na Universidade Federal de Viçosa, Campus Rio Paranaíba, e é atualizado a cada mês.",
+    "crumbs": [
+      "Apresentação"
+    ]
+  },
+  {
+    "objectID": "index.html#pranchas-desta-edição",
+    "href": "index.html#pranchas-desta-edição",
+    "title": "Atlas Colaborativo de Rio Paranaíba",
+    "section": "Pranchas desta edição",
+    "text": "Pranchas desta edição\n\n\n\nNº\nPrancha\nObjetos no mapa\n\n\n\n\n1\nLocalização e limites\n6\n\n\n3\nEducação\n9",
+    "crumbs": [
+      "Apresentação"
+    ]
+  },
+  {
+    "objectID": "index.html#como-usar-e-citar",
+    "href": "index.html#como-usar-e-citar",
+    "title": "Atlas Colaborativo de Rio Paranaíba",
+    "section": "Como usar e citar",
+    "text": "Como usar e citar\nOs mapas e os dados podem ser usados livremente, com a atribuição: Dados © colaboradores do OpenStreetMap (ODbL); Atlas Colaborativo de Rio Paranaíba, Programa Youthmappers UFV. Encontrou um erro no mapa? Corrija no OpenStreetMap ou fale com o programa.\nPara citar o atlas (ABNT):\nSMARZARO, Rodrigo (coord.). Atlas Colaborativo de Rio Paranaíba: mapas abertos do município, a partir do OpenStreetMap. Rio Paranaíba: Universidade Federal de Viçosa, Programa Youthmappers UFV, 2026. Disponível em: https://youthmappers-ufv.github.io/atlas-rio-paranaiba/. Acesso em: data do acesso.\nEm BibLaTeX (estilo abnt do pacote biblatex-abnt; baixar o arquivo .bib):\n% Acrescente urldate = {AAAA-MM-DD}, a data do acesso.\n@dataset{atlas-rio-paranaiba,\n  editor     = {Smarzaro, Rodrigo},\n  editortype = {coordinator},\n  title      = {Atlas Colaborativo de Rio Paranaíba},\n  subtitle   = {mapas abertos do município, a partir do {OpenStreetMap}},\n  location   = {Rio Paranaíba},\n  publisher  = {Universidade Federal de Viçosa, Programa Youthmappers UFV},\n  year       = {2026},\n  url        = {https://youthmappers-ufv.github.io/atlas-rio-paranaiba/},\n  langid     = {brazilian},\n}",
+    "crumbs": [
+      "Apresentação"
+    ]
+  },
+  {
+    "objectID": "metodo.html",
+    "href": "metodo.html",
+    "title": "Como o atlas é feito",
+    "section": "",
+    "text": "Extração. Os dados de cada tema são consultados no OpenStreetMap pela API Overpass e recortados pelo limite do município. Cada extração fica registrada com a data da base do OpenStreetMap.\nCompletude. Nos temas com base oficial (escolas, no Catálogo de Escolas do INEP; saúde, no CNES), mede-se a proporção de itens oficiais que têm correspondente no mapa, a até 150 metros e com nome semelhante, e a proporção dos correspondidos com nome e endereço. Nos demais temas, usam-se indicadores internos, como a proporção de vias com o tipo de pavimento informado.\nMapeamento. Estudantes e voluntários conferem em campo os itens divergentes e corrigem o mapa, sempre manualmente e com as hashtags #youthmappersufv #ymufv-atlas nas edições. As bases oficiais servem só para conferência: nada é copiado delas para o mapa.\nPublicação. O atlas é gerado de novo a cada mês, com os dados atualizados, e cada edição numerada fica disponível para consulta.",
+    "crumbs": [
+      "Como o atlas é feito"
+    ]
+  },
+  {
+    "objectID": "pranchas/01-localizacao.html",
+    "href": "pranchas/01-localizacao.html",
+    "title": "1. Localização e limites",
+    "section": "",
+    "text": "Rio Paranaíba fica no Alto Paranaíba, em Minas Gerais. O mapa mostra o limite do município no OpenStreetMap, a sede e os povoados e localidades registrados.\n\n\n\nLocalização e limites: município\n\n\nPontos cheios: objetos com nome no mapa; pontos vazados: sem nome.\n\n\n\nIndicador\nValor\n\n\n\n\nObjetos no OpenStreetMap\n6\n\n\nCom nome\n6 (100.0%)\n\n\n\nFonte: OpenStreetMap, dados de 2026-10-21. © colaboradores do OpenStreetMap (ODbL).",
+    "crumbs": [
+      "Pranchas",
+      "1. Localização e limites"
+    ]
+  },
+  {
+    "objectID": "pranchas/03-educacao.html",
+    "href": "pranchas/03-educacao.html",
+    "title": "3. Educação",
+    "section": "",
+    "text": "Escolas, creches e instituições de ensino superior no mapa aberto. A completude é medida em relação ao Catálogo de Escolas do INEP, quando a base estiver carregada em dados/oficiais/inep/.\n\n\n\nEducação: município\n\n\n\n\n\nEducação: sede do município\n\n\nPontos cheios: objetos com nome no mapa; pontos vazados: sem nome.\n\n\n\nIndicador\nValor\n\n\n\n\nObjetos no OpenStreetMap\n9\n\n\nCom nome\n8 (88.9%)\n\n\nCom endereço (rua)\n0 (0.0%)\n\n\nCom horário de funcionamento\n0 (0.0%)\n\n\nItens na base oficial (Catálogo de Escolas (lista detalhada))\n15\n\n\nCompletude C_t (com correspondente no OSM)\n3 (20.0%)\n\n\nQualidade Q_t (nome e endereço)\n0 (0.0%)\n\n\n\nItens da base oficial sem correspondente no mapa (12):\n\n\n\n\n\n\n\n\nCódigo\nNome\nMotivo provável\n\n\n\n\n31119288\nEM CINCINATO FERREIRA DE AGUIAR\nnada deste tema no OSM até 150 m: não mapeado\n\n\n31119351\nEM SEVERINO JOSE DE FIGUEIREDO\nnada deste tema no OSM até 150 m: não mapeado\n\n\n31119385\nEM JOAO BARBOSA DE BARROS\nnada deste tema no OSM até 150 m: não mapeado\n\n\n31119431\nEM JOAO ANTONIO MENDES\nnada deste tema no OSM até 150 m: não mapeado\n\n\n31212245\nEM PRES TANCREDO NEVES\nobjeto sem nome no OSM a 9 m: provavelmente este, falta o nome\n\n\n31250414\nAPAE ESC SELMA MOREIRA COSTA NOYA\nnada deste tema no OSM até 150 m: não mapeado\n\n\n31288101\nCRECHE MUNICIPAL MARIA MAE DE DEUS\n“Centro Municipal de Educação Infantil Joana Darc” no OSM a 23 m, com nome diferente (semelhança 0,44): conferir qual é o nome correto\n\n\n31288268\nCRECHE MUNICIPAL DE CHAVES\nnada deste tema no OSM até 150 m: não mapeado\n\n\n31288314\nCRECHE MUNICIPAL DE ABAETE DOS MENDES\nnada deste tema no OSM até 150 m: não mapeado\n\n\n31288420\nCRECHE MUN DE RIO PARANAIBA\ncoordenada oficial fora do município\n\n\n31355488\nCENTRO EDUCACIONAL PAULO FREIRE\nnome semelhante no OSM a 826 m (“Centro Educacional Paulo Freire”; limite 150 m): conferir a coordenada oficial e a posição no mapa\n\n\n31381438\nEM PROFESSOR JOSE LUIZ DE ARAUJO\nsem coordenada na base oficial; no OSM há “Escola Estadual Professor José Luiz de Araújo”: conferir se é o mesmo\n\n\n\nFonte: OpenStreetMap, dados de 2026-10-21. © colaboradores do OpenStreetMap (ODbL).",
+    "crumbs": [
+      "Pranchas",
+      "3. Educação"
+    ]
+  },
+  {
+    "objectID": "dados.html",
+    "href": "dados.html",
+    "title": "Dados para download",
+    "section": "",
+    "text": "Baixar o atlas completo em PDF\nOs dados de cada prancha estão em GeoJSON (abre no QGIS e em sites de mapas), na mesma versão usada nesta edição do atlas.\n\nLimite do município\nLocalização e limites\nEducação\n\nLicença: os dados derivados do OpenStreetMap seguem a Open Database License (ODbL); cite © colaboradores do OpenStreetMap.",
+    "crumbs": [
+      "Dados para download"
+    ]
+  }
+]
