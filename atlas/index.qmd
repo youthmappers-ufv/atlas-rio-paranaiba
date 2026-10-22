@@ -16,5 +16,4 @@ Os mapas e os dados podem ser usados livremente, com a atribuição: *Dados © c
 
 Para citar o atlas (ABNT):
 
-<!-- Com o motor v0.8.0 ou posterior, troque o parágrafo abaixo pelo include de _gerado/citacao.md, que mantém o ano e o endereço em dia. -->
-SMARZARO, Rodrigo (coord.). **Atlas Colaborativo de Rio Paranaíba**: mapas abertos do município, a partir do OpenStreetMap. Rio Paranaíba: Universidade Federal de Viçosa, Programa Youthmappers UFV, 2026. Disponível em: <https://youthmappers-ufv.github.io/atlas-rio-paranaiba/>. Acesso em: *data do acesso*.
+{{< include _gerado/citacao.md >}}
