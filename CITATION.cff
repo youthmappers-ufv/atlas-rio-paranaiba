@@ -9,6 +9,7 @@ authors:
     affiliation: "Universidade Federal de Viçosa, Campus Rio Paranaíba"
     orcid: "https://orcid.org/0000-0002-4783-8383"
   - name: "Programa Youthmappers UFV"
+doi: "10.5281/zenodo.23574311"
 repository: "https://github.com/youthmappers-ufv/atlas-rio-paranaiba"
 url: "https://youthmappers-ufv.github.io/atlas-rio-paranaiba/"
 license:
