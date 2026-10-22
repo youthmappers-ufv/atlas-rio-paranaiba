@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "Para citar este atlas, use a referência abaixo. A página inicial do atlas traz a referência no formato da ABNT e em BibLaTeX."
+type: dataset
+title: "Atlas Colaborativo de Rio Paranaíba"
+abstract: >-
+  Mapas temáticos abertos de Rio Paranaíba (MG), feitos a partir do OpenStreetMap,
+  com a completude medida em relação às bases oficiais e as lacunas apontadas para
+  conferência em campo. Programa Youthmappers UFV.
+authors:
+  - family-names: "Smarzaro"
+    given-names: "Rodrigo"
+    affiliation: "Universidade Federal de Viçosa, Campus Rio Paranaíba"
+  - name: "Programa Youthmappers UFV"
+repository: "https://github.com/youthmappers-ufv/atlas-rio-paranaiba"
+url: "https://youthmappers-ufv.github.io/atlas-rio-paranaiba/"
+license:
+  - ODbL-1.0
+  - CC-BY-4.0
+  - MIT
+keywords:
+  - OpenStreetMap
+  - atlas municipal
+  - completude
+  - "Rio Paranaíba"

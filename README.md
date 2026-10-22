@@ -7,6 +7,29 @@ Repositório do atlas de **Rio Paranaíba** (IBGE 3155504), do Programa Youthmap
 
 > **Tudo aqui é público**, inclusive o histórico, as branches, as issues e os pull requests, a partir do momento em que são enviados. Só entram dados públicos: nada de nomes de moradores ou informantes, telefones, e-mails, CPF ou fotos de fichas. Veja a seção "Dados públicos" do [CONTRIBUTING.md](CONTRIBUTING.md).
 
+## Como citar
+
+SMARZARO, Rodrigo (coord.). **Atlas Colaborativo de Rio Paranaíba**: mapas abertos do município, a partir do OpenStreetMap. Rio Paranaíba: Universidade Federal de Viçosa, Programa Youthmappers UFV, 2026. Disponível em: <https://youthmappers-ufv.github.io/atlas-rio-paranaiba/>. Acesso em: *data do acesso*.
+
+Em BibLaTeX (estilo `abnt` do pacote biblatex-abnt):
+
+```bibtex
+% Acrescente urldate = {AAAA-MM-DD}, a data do acesso.
+@book{atlas-rio-paranaiba,
+  editor     = {Smarzaro, Rodrigo},
+  editortype = {coordinator},
+  title      = {Atlas Colaborativo de Rio Paranaíba},
+  subtitle   = {mapas abertos do município, a partir do {OpenStreetMap}},
+  location   = {Rio Paranaíba},
+  publisher  = {Universidade Federal de Viçosa, Programa Youthmappers UFV},
+  year       = {2026},
+  url        = {https://youthmappers-ufv.github.io/atlas-rio-paranaiba/},
+  langid     = {brazilian},
+}
+```
+
+O GitHub também oferece a citação pelo botão *Cite this repository* (arquivo `CITATION.cff`). A página inicial do atlas traz a referência com o ano da edição e o arquivo `.bib` para baixar. Os dados do OpenStreetMap pedem, além disso, a atribuição *© colaboradores do OpenStreetMap (ODbL)*.
+
 ## Estrutura
 
 ```
