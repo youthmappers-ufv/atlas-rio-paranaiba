@@ -1,9 +1,9 @@
-# Gera o site e o PDF do atlas e publica em youthmappers-ufv/atlas, na pasta deste município.
-#  - tag v* (ex.: v1.0): edição numerada, em /<slug>/edicoes/<tag>/ e como versão principal,
-#    com release (privado) do PDF neste repositório;
+# Gera o site e o PDF do atlas e publica no GitHub Pages deste repositório (atlas.toml:
+# publicacao.hospedagem = "pages") ou só como artefato do workflow (hospedagem = "artefato").
+#  - tag v* (ex.: v1.0): edição numerada em /edicoes/<tag>/ e versão principal, com release do PDF;
 #  - dia 5 de cada mês: versão principal a partir da main;
 #  - botão "Run workflow": qualquer branch, tag ou commit, com dados versionados ou atuais.
-# Requer o segredo ATLAS_CHAVE_PUBLICACAO (chave de deploy do repositório público).
+# Na primeira publicação no Pages: Settings > Pages > Deploy from a branch > gh-pages, / (root).
 name: Publicar atlas
 
 on:
@@ -32,9 +32,8 @@ permissions:
 
 jobs:
   publicar:
-    uses: youthmappers-ufv/atlas-motor/.github/workflows/publicar.yml@v0.2.1
+    uses: youthmappers-ufv/atlas-motor/.github/workflows/publicar.yml@v0.5.1
     with:
       versao: ${{ inputs.versao || '' }}
       dados_atuais: ${{ inputs.dados_atuais || false }}
       destino: ${{ inputs.destino || '' }}
-    secrets: inherit

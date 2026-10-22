@@ -4,6 +4,8 @@ about: Propor uma base oficial ou um conjunto de dados levantados pela equipe
 labels: dados
 ---
 
+<!-- Este repositório é público: não inclua nomes de pessoas, telefones, e-mails ou outros dados pessoais. -->
+
 **Qual dado:** <!-- ex.: Catálogo de Escolas do INEP, lista de equipamentos da Prefeitura -->
 
 **Fonte e licença:** <!-- órgão, endereço, data de acesso, licença -->

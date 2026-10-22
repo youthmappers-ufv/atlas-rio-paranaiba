@@ -1,3 +1,5 @@
+<!-- Este repositório é público: não inclua nomes de pessoas, telefones, e-mails ou outros dados pessoais. -->
+
 ## O que muda
 
 <!-- Uma ou duas frases. Ligue a issue: "Resolve #12". -->

@@ -15,7 +15,7 @@ sede_bbox = [-19.2115, -46.2600, -19.1815, -46.2265]         # recorte dos mapas
 # Versão do atlas-motor usada por este município. Para atualizar:
 #   python ../atlas-motor/scripts/atualizar_motor.py --versao vX.Y.Z
 # (troca aqui e nos workflows; o validador confere que batem).
-versao = "v0.2.1"
+versao = "v0.5.1"
 
 [hashtags]
 # Toda edição no OSM feita para o atlas leva as duas, sempre juntas.
@@ -35,9 +35,14 @@ distancia_max_m = 150
 similaridade_min = 0.6
 
 [publicacao]
-slug = "rio-paranaiba"                                     # pasta no site: /atlas/rio-paranaiba/
-url_base = "https://youthmappers-ufv.github.io/atlas/"
-repositorio = "youthmappers-ufv/atlas"                # repositório público só de saída
+# Onde o atlas é publicado:
+#   "pages"    = GitHub Pages deste repositório (que deve ser público), branch gh-pages;
+#   "artefato" = só artefato do workflow (e release, em tags), para baixar e hospedar onde quiser
+#                ou para repositório privado (ex.: município sem parceria).
+hospedagem = "pages"
+url = "https://youthmappers-ufv.github.io/atlas-rio-paranaiba/"   # endereço do site
+dominio = ""                                          # opcional: domínio próprio (ex.: "atlas.prefeitura.mg.gov.br")
+slug = "rio-paranaiba"                                     # nome do PDF: atlas-<slug>.pdf
 atribuicao = "© colaboradores do OpenStreetMap (ODbL)"
 autoria = "Programa Youthmappers UFV"
 instituicao = "Universidade Federal de Viçosa — Campus Rio Paranaíba"

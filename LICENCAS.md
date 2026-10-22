@@ -8,4 +8,4 @@
 | Textos das pranchas e do atlas | CC BY 4.0 | |
 | Código (`scripts/`, `testes/`, workflows) | MIT | |
 
-Enquanto o repositório for privado, as licenças valem para o que é publicado em `youthmappers-ufv/atlas`. Quando decididas, acrescente os arquivos de licença correspondentes.
+Decidir antes de tornar o repositório público; depois, acrescentar os arquivos de licença correspondentes. A linha dos dados derivados do OSM é imposta pela licença do OSM.
