@@ -45,12 +45,13 @@ Coordenadas em graus decimais (WGS 84), com ponto: `-19.1965`.
 ## 4. Pranchas (`atlas/`)
 
 - Para abrir uma prancha: `python ../atlas-motor/scripts/ativar_tema.py <tema>`. O script muda a situação em `temas.toml` e cria `atlas/pranchas/<nn>-<tema>.qmd`; depois, rode `baixar_osm.py --tema <tema>` e escreva o texto.
-- O texto da prancha é da equipe; mapas, indicadores e lacunas entram pelo `include`, gerados pelo motor.
+- O texto da prancha é da equipe; mapas, indicadores e lacunas entram pelo `include`, gerados pelo motor. A prancha pode ser montada parte a parte, com seções, texto entre os mapas, imagens próprias e figuras em outro tamanho: veja o [guia de pranchas](https://github.com/youthmappers-ufv/atlas-motor/blob/main/docs/pranchas.md).
+- Tema que faria sentido em outros municípios: proponha no catálogo do motor ([novos temas](https://github.com/youthmappers-ufv/atlas-motor/blob/main/docs/novos-temas.md)); enquanto isso, ele pode ser prancha própria deste município (número 20 em diante).
 - Veja o resultado com `python ../atlas-motor/scripts/construir.py --previa`: abre o site no navegador e recarrega a cada texto salvo em `atlas/`. Mudou dados, `temas.toml` ou `atlas.toml`? Rode `construir.py` de novo (pode ser com a prévia aberta, em outro terminal). Para o site completo em arquivo, `--renderizar html`.
 
-## 5. Identidade visual (`tema/`)
+## 5. Identidade visual (`identidade/`)
 
-Sem `tema/_brand.yml`, o atlas usa a identidade do Programa Youthmappers UFV. Para usar a da prefeitura parceira (cores, fontes, logos no site e no PDF), siga o [tema/LEIAME.md](tema/LEIAME.md). O uso da marca da prefeitura depende de autorização dela, registrada no termo de parceria. O validador confere as cores, os logos citados e o formato real das imagens.
+Sem `identidade/_brand.yml`, o atlas usa a identidade do Programa Youthmappers UFV. Para usar a da prefeitura parceira (cores, fontes, logos no site e no PDF), siga o [guia de identidade visual](https://github.com/youthmappers-ufv/atlas-motor/blob/main/docs/identidade-visual.md) (resumo em [identidade/LEIAME.md](identidade/LEIAME.md)). O uso da marca da prefeitura depende de autorização dela, registrada no termo de parceria. O validador confere as cores, os logos citados e o formato real das imagens.
 
 ## 6. Atualizar o motor
 

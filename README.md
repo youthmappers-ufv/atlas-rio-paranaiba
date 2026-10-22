@@ -19,7 +19,7 @@ dados/
   curados/        dados levantados pela equipe (CSV, esquemas no catálogo do motor)
   esquemas/       esquemas próprios deste município (opcional)
 atlas/            textos: index.qmd (apresentação) e pranchas/<nn>-<tema>.qmd
-tema/             identidade visual própria (opcional): _brand.yml e logos; sem ela, a do programa
+identidade/       identidade visual própria (opcional): _brand.yml e logos; sem ela, a do programa
 .github/          workflows que chamam o motor; modelos de issue e PR
 ```
 
@@ -36,4 +36,4 @@ python ../atlas-motor/scripts/construir.py --previa             # prévia ao viv
 python ../atlas-motor/scripts/construir.py --renderizar todos   # site e PDF em _construcao/livro/_site/
 ```
 
-Procedimentos de contribuição: [CONTRIBUTING.md](CONTRIBUTING.md). Configuração no GitHub: `docs/configuracao-github.md` do atlas-motor. Licenças: [LICENCAS.md](LICENCAS.md).
+Procedimentos de contribuição: [CONTRIBUTING.md](CONTRIBUTING.md). Licenças: [LICENCAS.md](LICENCAS.md). Documentação completa (guia do município, pranchas, identidade visual, referência, solução de problemas): [docs do atlas-motor](https://github.com/youthmappers-ufv/atlas-motor/blob/main/docs/README.md).
