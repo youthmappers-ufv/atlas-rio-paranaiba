@@ -59,4 +59,4 @@ Quando sair uma versão nova do atlas-motor: `python ../atlas-motor/scripts/atua
 
 ## 7. Edições do atlas
 
-A coordenação cria a tag (`git tag v1.0 && git push origin v1.0`) quando uma etapa se fecha. O workflow *Publicar atlas* gera site e PDF daquela versão, publica em `edicoes/v1.0/` e como versão principal (se `publicacao.hospedagem = "pages"`) e anexa o PDF a um release.
+A coordenação cria a tag (`git tag v1.0.0 && git push origin v1.0.0`) quando uma etapa se fecha. O workflow *Publicar atlas* gera site e PDF daquela versão e publica em `edicoes/v1.0.0/` e como versão principal (se `publicacao.hospedagem = "pages"`). Use tags de versão semântica (`vX.Y.Z`). Só uma **versão maior** (`v1.0.0`, `v2.0.0`...) ganha release com o PDF (e DOI, com o Zenodo ligado) sozinha; nas demais (`v1.1.0`, `v1.0.1`), a edição é publicada sem release, que pode ser criado depois em *Actions* > *Publicar atlas* > *Run workflow*, com a tag em `versao` e `release` marcado.
