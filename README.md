@@ -1,6 +1,6 @@
 # Atlas Colaborativo de Rio Paranaíba (MG)
 
-[![site do atlas](https://img.shields.io/badge/atlas-site-blue)](https://youthmappers-ufv.github.io/atlas-rio-paranaiba/) [![Publicar atlas](https://github.com/youthmappers-ufv/atlas-rio-paranaiba/actions/workflows/publicar.yml/badge.svg)](https://github.com/youthmappers-ufv/atlas-rio-paranaiba/actions/workflows/publicar.yml) [![Verificar](https://github.com/youthmappers-ufv/atlas-rio-paranaiba/actions/workflows/verificar.yml/badge.svg?branch=main)](https://github.com/youthmappers-ufv/atlas-rio-paranaiba/actions/workflows/verificar.yml) [![dados do OSM](https://img.shields.io/endpoint?url=https%3A%2F%2Fyouthmappers-ufv.github.io%2Fatlas-rio-paranaiba%2F_gerado%2Fbadges%2Fdados.json)](https://youthmappers-ufv.github.io/atlas-rio-paranaiba/dados.html) [![completude](https://img.shields.io/endpoint?url=https%3A%2F%2Fyouthmappers-ufv.github.io%2Fatlas-rio-paranaiba%2F_gerado%2Fbadges%2Fcompletude.json)](https://youthmappers-ufv.github.io/atlas-rio-paranaiba/) [![motor](https://img.shields.io/endpoint?url=https%3A%2F%2Fyouthmappers-ufv.github.io%2Fatlas-rio-paranaiba%2F_gerado%2Fbadges%2Fmotor.json)](https://github.com/youthmappers-ufv/atlas-motor) [![edição](https://img.shields.io/github/v/release/youthmappers-ufv/atlas-rio-paranaiba?label=edi%C3%A7%C3%A3o)](https://github.com/youthmappers-ufv/atlas-rio-paranaiba/releases) [![dados: ODbL 1.0](https://img.shields.io/badge/dados-ODbL%201.0-brightgreen)](LICENCAS.md) [![textos: CC BY 4.0](https://img.shields.io/badge/textos-CC%20BY%204.0-lightgrey)](LICENCAS.md)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23574311.svg)](https://doi.org/10.5281/zenodo.23574311) [![site do atlas](https://img.shields.io/badge/atlas-site-blue)](https://youthmappers-ufv.github.io/atlas-rio-paranaiba/) [![Publicar atlas](https://github.com/youthmappers-ufv/atlas-rio-paranaiba/actions/workflows/publicar.yml/badge.svg)](https://github.com/youthmappers-ufv/atlas-rio-paranaiba/actions/workflows/publicar.yml) [![Verificar](https://github.com/youthmappers-ufv/atlas-rio-paranaiba/actions/workflows/verificar.yml/badge.svg?branch=main)](https://github.com/youthmappers-ufv/atlas-rio-paranaiba/actions/workflows/verificar.yml) [![dados do OSM](https://img.shields.io/endpoint?url=https%3A%2F%2Fyouthmappers-ufv.github.io%2Fatlas-rio-paranaiba%2F_gerado%2Fbadges%2Fdados.json)](https://youthmappers-ufv.github.io/atlas-rio-paranaiba/dados.html) [![completude](https://img.shields.io/endpoint?url=https%3A%2F%2Fyouthmappers-ufv.github.io%2Fatlas-rio-paranaiba%2F_gerado%2Fbadges%2Fcompletude.json)](https://youthmappers-ufv.github.io/atlas-rio-paranaiba/) [![motor](https://img.shields.io/endpoint?url=https%3A%2F%2Fyouthmappers-ufv.github.io%2Fatlas-rio-paranaiba%2F_gerado%2Fbadges%2Fmotor.json)](https://github.com/youthmappers-ufv/atlas-motor) [![edição](https://img.shields.io/github/v/release/youthmappers-ufv/atlas-rio-paranaiba?label=edi%C3%A7%C3%A3o)](https://github.com/youthmappers-ufv/atlas-rio-paranaiba/releases) [![dados: ODbL 1.0](https://img.shields.io/badge/dados-ODbL%201.0-brightgreen)](LICENCAS.md) [![textos: CC BY 4.0](https://img.shields.io/badge/textos-CC%20BY%204.0-lightgrey)](LICENCAS.md)
 
 Repositório do atlas de **Rio Paranaíba** (IBGE 3155504), do Programa Youthmappers UFV. Guarda só o que é deste município: configuração, dados e textos. O código e a estrutura comuns ficam no [atlas-motor](https://github.com/youthmappers-ufv/atlas-motor), na versão declarada em `atlas.toml` (`motor.versao`).
 
@@ -11,7 +11,7 @@ Repositório do atlas de **Rio Paranaíba** (IBGE 3155504), do Programa Youthmap
 
 ## Como citar
 
-SMARZARO, Rodrigo (coord.). **Atlas Colaborativo de Rio Paranaíba**: mapas abertos do município, a partir do OpenStreetMap. Rio Paranaíba: Universidade Federal de Viçosa, Programa Youthmappers UFV, 2026. Disponível em: <https://youthmappers-ufv.github.io/atlas-rio-paranaiba/>. Acesso em: *data do acesso*.
+SMARZARO, Rodrigo (coord.). **Atlas Colaborativo de Rio Paranaíba**: mapas abertos do município, a partir do OpenStreetMap. Rio Paranaíba: Universidade Federal de Viçosa, Programa Youthmappers UFV, 2026. DOI: 10.5281/zenodo.23574311. Disponível em: <https://youthmappers-ufv.github.io/atlas-rio-paranaiba/>. Acesso em: *data do acesso*.
 
 Em BibLaTeX (estilo `abnt` do pacote biblatex-abnt):
 
@@ -25,6 +25,7 @@ Em BibLaTeX (estilo `abnt` do pacote biblatex-abnt):
   location   = {Rio Paranaíba},
   publisher  = {Universidade Federal de Viçosa, Programa Youthmappers UFV},
   year       = {2026},
+  doi        = {10.5281/zenodo.23574311},
   url        = {https://youthmappers-ufv.github.io/atlas-rio-paranaiba/},
   langid     = {brazilian},
 }
