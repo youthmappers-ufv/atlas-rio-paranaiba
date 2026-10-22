@@ -1,0 +1,13 @@
+nome = "Catálogo de Escolas (lista detalhada)"
+orgao = "INEP"
+url = "https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/inep-data/catalogo-de-escolas"
+data_acesso = 2026-10-22
+licenca = "Dados abertos do INEP (Catálogo de Escolas, InepData)"
+arquivo = "escolas.csv"
+observacao = "Exportado do Catálogo de Escolas para o município 3155504 (29 escolas). Mantidas só as 15 em funcionamento (saíram as 14 paralisadas); removidas as colunas de telefone e as de oferta e porte; colunas renomeadas; espaços das coordenadas vazias retirados."
+
+[colunas]
+id = "codigo_inep"
+nome = "escola"
+lat = "latitude"
+lon = "longitude"
