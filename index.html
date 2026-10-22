@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Rodrigo Smarzaro (coordenação)">
 <meta name="author" content="Programa Youthmappers UFV">
 
 <title>Atlas Colaborativo de Rio Paranaíba</title>
@@ -26,6 +27,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -49,9 +85,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-2bec29a9bacf2b598905820d71afb463.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-1d84a567f3cf8f9c94162bd2960e6bf7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-c74e1bb6cc233cb2922b271ecac0ad99.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-1d84a567f3cf8f9c94162bd2960e6bf7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-1a5bef15cd366da39481d81a4211c00c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-986ebbdbc308d783e0fc1593af62bf03.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-1a5bef15cd366da39481d81a4211c00c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -197,8 +233,9 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Autor</div>
+    <div class="quarto-title-meta-heading">Autores</div>
     <div class="quarto-title-meta-contents">
+             <p>Rodrigo Smarzaro (coordenação) </p>
              <p>Programa Youthmappers UFV </p>
           </div>
   </div>
@@ -215,7 +252,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="apresentação" class="level1 unnumbered">
 <h1 class="unnumbered">Apresentação</h1>
 <p>O <strong>Atlas Colaborativo de Rio Paranaíba</strong> reúne mapas temáticos do município feitos a partir do <a href="https://www.openstreetmap.org">OpenStreetMap</a>, o mapa livre mantido por voluntários do mundo todo. Cada prancha mostra o que já está no mapa, mede o quanto ele está completo em relação às bases oficiais e aponta as lacunas, que estudantes e comunidade completam em campo e em mapatonas.</p>
-<p>Versão <strong>main</strong> (motor v0.7.0), com dados do OpenStreetMap de <strong>2026-10-21</strong>.</p>
+<p>Versão <strong>main</strong> (motor v0.10.1), com dados do OpenStreetMap de <strong>2026-10-21</strong>.</p>
+<p><a class="btn btn-primary atlas-pdf" href="atlas-rio-paranaiba.pdf" download=""><i class="bi bi-file-earmark-pdf" aria-hidden="true"></i> Baixar o atlas completo em PDF</a></p>
 <p>O atlas é produzido pelo projeto de extensão <em>Atlas Colaborativo do Município</em> (RAEX PRJ-211/2026), do Programa Youthmappers UFV, na Universidade Federal de Viçosa, <em>Campus</em> Rio Paranaíba, e é atualizado a cada mês.</p>
 <section id="pranchas-desta-edição" class="level2">
 <h2 class="anchored" data-anchor-id="pranchas-desta-edição">Pranchas desta edição</h2>
@@ -244,6 +282,21 @@ ul.task-list li input[type="checkbox"] {
 <section id="como-usar-e-citar" class="level2">
 <h2 class="anchored" data-anchor-id="como-usar-e-citar">Como usar e citar</h2>
 <p>Os mapas e os dados podem ser usados livremente, com a atribuição: <em>Dados © colaboradores do OpenStreetMap (ODbL); Atlas Colaborativo de Rio Paranaíba, Programa Youthmappers UFV</em>. Encontrou um erro no mapa? Corrija no OpenStreetMap ou fale com o programa.</p>
+<p>Para citar o atlas (ABNT):</p>
+<p>SMARZARO, Rodrigo (coord.). <strong>Atlas Colaborativo de Rio Paranaíba</strong>: mapas abertos do município, a partir do OpenStreetMap. Rio Paranaíba: Universidade Federal de Viçosa, Programa Youthmappers UFV, 2026. Disponível em: <a href="https://youthmappers-ufv.github.io/atlas-rio-paranaiba/" class="uri">https://youthmappers-ufv.github.io/atlas-rio-paranaiba/</a>. Acesso em: <em>data do acesso</em>.</p>
+<p>Em BibLaTeX (estilo <code>abnt</code> do pacote biblatex-abnt; <a href="_gerado/downloads/atlas-rio-paranaiba.bib">baixar o arquivo .bib</a>):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bibtex code-with-copy"><code class="sourceCode bibtex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">% Acrescente urldate = {AAAA-MM-DD}, a data do acesso.</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">@dataset{atlas-rio-paranaiba,</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">  editor     = {Smarzaro, Rodrigo},</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">  editortype = {coordinator},</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  title      = {Atlas Colaborativo de Rio Paranaíba},</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  subtitle   = {mapas abertos do município, a partir do {OpenStreetMap}},</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  location   = {Rio Paranaíba},</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">  publisher  = {Universidade Federal de Viçosa, Programa Youthmappers UFV},</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">  year       = {2026},</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">  url        = {https://youthmappers-ufv.github.io/atlas-rio-paranaiba/},</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">  langid     = {brazilian},</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">}</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 </section>
@@ -666,7 +719,7 @@ ul.task-list li input[type="checkbox"] {
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>Dados © colaboradores do OpenStreetMap (ODbL) · Programa Youthmappers UFV · RAEX PRJ-211/2026</p>
+<p>Dados © colaboradores do OpenStreetMap (ODbL) · Programa Youthmappers UFV · Coordenação: Rodrigo Smarzaro · RAEX PRJ-211/2026</p>
 </div>
     <div class="nav-footer-right">
       &nbsp;
