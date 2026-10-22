@@ -45,5 +45,6 @@ dominio = ""                                          # opcional: domínio próp
 slug = "rio-paranaiba"                                     # nome do PDF: atlas-<slug>.pdf
 atribuicao = "© colaboradores do OpenStreetMap (ODbL)"
 autoria = "Programa Youthmappers UFV"
+coordenacao = "Rodrigo Smarzaro"                      # opcional: quem coordena; entra na autoria como (coordenação)
 instituicao = "Universidade Federal de Viçosa — Campus Rio Paranaíba"
 registro = "RAEX PRJ-211/2026"
