@@ -1,0 +1,32 @@
+{
+  "upload_type": "dataset",
+  "title": "Atlas Colaborativo de Rio Paranaíba",
+  "description": "Mapas temáticos abertos de Rio Paranaíba (MG), feitos a partir do OpenStreetMap, com a completude medida em relação às bases oficiais e as lacunas apontadas para conferência em campo. Programa Youthmappers UFV. Site: https://youthmappers-ufv.github.io/atlas-rio-paranaiba/",
+  "creators": [
+    {
+      "name": "Smarzaro, Rodrigo",
+      "affiliation": "Universidade Federal de Viçosa, Campus Rio Paranaíba",
+      "orcid": "0000-0002-4783-8383"
+    },
+    {
+      "name": "Programa Youthmappers UFV"
+    }
+  ],
+  "license": "odbl-1.0",
+  "keywords": [
+    "OpenStreetMap",
+    "atlas municipal",
+    "completude",
+    "Rio Paranaíba"
+  ],
+  "language": "por",
+  "notes": "Licenças: dados derivados do OpenStreetMap e levantados pela equipe sob ODbL 1.0; textos, mapas, site e PDF sob CC BY 4.0; configuração e workflows sob MIT (LICENCAS.md do repositório). Dados © colaboradores do OpenStreetMap.",
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.23573341",
+      "relation": "isCompiledBy",
+      "resource_type": "software",
+      "scheme": "doi"
+    }
+  ]
+}

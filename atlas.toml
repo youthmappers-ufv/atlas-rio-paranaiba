@@ -15,7 +15,7 @@ sede_bbox = [-19.2115, -46.2600, -19.1815, -46.2265]         # recorte dos mapas
 # Versão do atlas-motor usada por este município. Para atualizar:
 #   python ../atlas-motor/scripts/atualizar_motor.py --versao vX.Y.Z
 # (troca aqui e nos workflows; o validador confere que batem).
-versao = "v0.11.0"
+versao = "v0.12.0"
 
 [hashtags]
 # Toda edição no OSM feita para o atlas leva as duas, sempre juntas.
@@ -46,5 +46,7 @@ slug = "rio-paranaiba"                                     # nome do PDF: atlas-
 atribuicao = "© colaboradores do OpenStreetMap (ODbL)"
 autoria = "Programa Youthmappers UFV"
 coordenacao = "Rodrigo Smarzaro"                      # opcional: quem coordena; entra na autoria como (coordenação)
+coordenacao_orcid = "0000-0002-4783-8383"             # opcional: ORCID de quem coordena (CITATION.cff e Zenodo)
+doi = ""                                              # opcional: DOI conceito do Zenodo (todas as edições), ex.: "10.5281/zenodo.123"
 instituicao = "Universidade Federal de Viçosa — Campus Rio Paranaíba"
 registro = "RAEX PRJ-211/2026"
