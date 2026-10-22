@@ -1,0 +1,8 @@
+{"type":"FeatureCollection","features":[
+{"type":"Feature","properties":{"osm":"node/246671484","tags":{"name":"Rio Paranaíba","place":"town","population":"14532","population:date":"2023-08-31","ref:LOCODE":"BRRPA","source":"geominas","source:population":"IBGE, DOU de 31/08/2023","wikidata":"Q1809966","wikipedia":"pt:Rio Paranaíba (município)"}},"geometry":{"type":"Point","coordinates":[-46.2411395,-19.1965275]}},
+{"type":"Feature","properties":{"osm":"node/416644611","tags":{"name":"Abaeté dos Mendes","place":"village","source":"IBGE"}},"geometry":{"type":"Point","coordinates":[-46.1285108,-19.1466872]}},
+{"type":"Feature","properties":{"osm":"node/416655847","tags":{"name":"Capelinha de São João","place":"hamlet","source":"IBGE"}},"geometry":{"type":"Point","coordinates":[-46.392551,-19.2758]}},
+{"type":"Feature","properties":{"osm":"node/416655853","tags":{"name":"Chave Olhos d'Água","place":"hamlet","source":"IBGE"}},"geometry":{"type":"Point","coordinates":[-46.2056581,-19.0771639]}},
+{"type":"Feature","properties":{"osm":"node/2318435707","tags":{"name":"São Pedro","place":"hamlet"}},"geometry":{"type":"Point","coordinates":[-46.4332365,-19.2704758]}},
+{"type":"Feature","properties":{"osm":"node/2318459683","tags":{"name":"Cidade Áurea","place":"hamlet"}},"geometry":{"type":"Point","coordinates":[-46.5112027,-19.2684961]}}
+]}
