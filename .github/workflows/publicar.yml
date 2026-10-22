@@ -1,6 +1,7 @@
 # Gera o site e o PDF do atlas e publica no GitHub Pages deste repositório (atlas.toml:
 # publicacao.hospedagem = "pages") ou só como artefato do workflow (hospedagem = "artefato").
-#  - tag v* (ex.: v1.0): edição numerada em /edicoes/<tag>/ e versão principal, com release do PDF;
+#  - tag v* (ex.: v1.1.0): edição numerada em /edicoes/<tag>/ e versão principal; release do PDF (e DOI,
+#    com o Zenodo) sozinho só em versão maior (v1.0.0, v2.0.0...), nas demais com "release" no botão;
 #  - dia 5 de cada mês: versão principal a partir da main;
 #  - botão "Run workflow": qualquer branch, tag ou commit, com dados versionados ou atuais.
 # Na primeira publicação no Pages: Settings > Pages > Deploy from a branch > gh-pages, / (root).
@@ -26,14 +27,19 @@ on:
         type: choice
         options: [principal, edicao]
         default: principal
+      release:
+        description: "Criar o release (e o DOI, com o Zenodo) desta tag: versao precisa ser uma tag"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
 
 jobs:
   publicar:
-    uses: youthmappers-ufv/atlas-motor/.github/workflows/publicar.yml@v0.10.1
+    uses: youthmappers-ufv/atlas-motor/.github/workflows/publicar.yml@v0.11.0
     with:
       versao: ${{ inputs.versao || '' }}
       dados_atuais: ${{ inputs.dados_atuais || false }}
       destino: ${{ inputs.destino || '' }}
+      release: ${{ inputs.release || false }}
