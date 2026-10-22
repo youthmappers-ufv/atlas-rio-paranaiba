@@ -13,3 +13,7 @@ O atlas é produzido pelo projeto de extensão *Atlas Colaborativo do Município
 ## Como usar e citar
 
 Os mapas e os dados podem ser usados livremente, com a atribuição: *Dados © colaboradores do OpenStreetMap (ODbL); Atlas Colaborativo de Rio Paranaíba, Programa Youthmappers UFV*. Encontrou um erro no mapa? Corrija no OpenStreetMap ou fale com o programa.
+
+Para citar o atlas (ABNT):
+
+{{< include _gerado/citacao.md >}}
