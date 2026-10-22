@@ -17,7 +17,7 @@ Em BibLaTeX (estilo `abnt` do pacote biblatex-abnt):
 
 ```bibtex
 % Acrescente urldate = {AAAA-MM-DD}, a data do acesso.
-@book{atlas-rio-paranaiba,
+@dataset{atlas-rio-paranaiba,
   editor     = {Smarzaro, Rodrigo},
   editortype = {coordinator},
   title      = {Atlas Colaborativo de Rio Paranaíba},

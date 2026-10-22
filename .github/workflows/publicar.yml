@@ -32,7 +32,7 @@ permissions:
 
 jobs:
   publicar:
-    uses: youthmappers-ufv/atlas-motor/.github/workflows/publicar.yml@v0.10.0
+    uses: youthmappers-ufv/atlas-motor/.github/workflows/publicar.yml@v0.10.1
     with:
       versao: ${{ inputs.versao || '' }}
       dados_atuais: ${{ inputs.dados_atuais || false }}
