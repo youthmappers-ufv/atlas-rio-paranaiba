@@ -18,7 +18,6 @@ dados/
   curados/        dados levantados pela equipe (CSV, esquemas no catálogo do motor)
   esquemas/       esquemas próprios deste município (opcional)
 atlas/            textos: index.qmd (apresentação) e pranchas/<nn>-<tema>.qmd
-docs/decisoes.md  decisões do município (etiquetas, fontes, temas)
 .github/          workflows que chamam o motor; modelos de issue e PR
 ```
 
