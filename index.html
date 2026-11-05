@@ -85,9 +85,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-2bec29a9bacf2b598905820d71afb463.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-843f6295af5b49b6fbe4cec33327a274.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-64e3661090fa1aef9fb70f148a09cce8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-843f6295af5b49b6fbe4cec33327a274.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-f55399832814e1c3652724ba77e80da1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-10b896da4047eafeb3def905a76ea131.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-f55399832814e1c3652724ba77e80da1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -252,7 +252,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="apresentação" class="level1 unnumbered">
 <h1 class="unnumbered">Apresentação</h1>
 <p>O <strong>Atlas Colaborativo de Rio Paranaíba</strong> reúne mapas temáticos do município feitos a partir do <a href="https://www.openstreetmap.org">OpenStreetMap</a>, o mapa livre mantido por voluntários do mundo todo. Cada prancha mostra o que já está no mapa, mede o quanto ele está completo em relação às bases oficiais e aponta as lacunas, que estudantes e comunidade completam em campo e em mapatonas.</p>
-<p>Versão <strong>v0.1.1</strong> (motor v0.12.0), com dados do OpenStreetMap de <strong>2026-10-21</strong>.</p>
+<p>Versão <strong>main</strong> (motor v0.12.0), com dados do OpenStreetMap de <strong>2026-10-21</strong>.</p>
 <p><a class="btn btn-primary atlas-pdf" href="atlas-rio-paranaiba.pdf" download=""><i class="bi bi-file-earmark-pdf" aria-hidden="true"></i> Baixar o atlas completo em PDF</a></p>
 <p>O atlas é produzido pelo projeto de extensão <em>Atlas Colaborativo do Município</em> (RAEX PRJ-211/2026), do Programa Youthmappers UFV, na Universidade Federal de Viçosa, <em>Campus</em> Rio Paranaíba, e é atualizado a cada mês.</p>
 <section id="pranchas-desta-edição" class="level2">
@@ -283,7 +283,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="como-usar-e-citar">Como usar e citar</h2>
 <p>Os mapas e os dados podem ser usados livremente, com a atribuição: <em>Dados © colaboradores do OpenStreetMap (ODbL); Atlas Colaborativo de Rio Paranaíba, Programa Youthmappers UFV</em>. Encontrou um erro no mapa? Corrija no OpenStreetMap ou fale com o programa.</p>
 <p>Para citar o atlas (ABNT):</p>
-<p>SMARZARO, Rodrigo (coord.). <strong>Atlas Colaborativo de Rio Paranaíba</strong>: mapas abertos do município, a partir do OpenStreetMap. Rio Paranaíba: Universidade Federal de Viçosa, Programa Youthmappers UFV, 2026. Disponível em: <a href="https://youthmappers-ufv.github.io/atlas-rio-paranaiba/" class="uri">https://youthmappers-ufv.github.io/atlas-rio-paranaiba/</a>. Acesso em: <em>data do acesso</em>.</p>
+<p>SMARZARO, Rodrigo (coord.). <strong>Atlas Colaborativo de Rio Paranaíba</strong>: mapas abertos do município, a partir do OpenStreetMap. Rio Paranaíba: Universidade Federal de Viçosa, Programa Youthmappers UFV, 2026. DOI: 10.5281/zenodo.23574311. Disponível em: <a href="https://youthmappers-ufv.github.io/atlas-rio-paranaiba/" class="uri">https://youthmappers-ufv.github.io/atlas-rio-paranaiba/</a>. Acesso em: <em>data do acesso</em>.</p>
 <p>Em BibLaTeX (estilo <code>abnt</code> do pacote biblatex-abnt; <a href="_gerado/downloads/atlas-rio-paranaiba.bib">baixar o arquivo .bib</a>):</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bibtex code-with-copy"><code class="sourceCode bibtex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">% Acrescente urldate = {AAAA-MM-DD}, a data do acesso.</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">@dataset{atlas-rio-paranaiba,</span></span>
@@ -294,9 +294,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  location   = {Rio Paranaíba},</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">  publisher  = {Universidade Federal de Viçosa, Programa Youthmappers UFV},</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">  year       = {2026},</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">  url        = {https://youthmappers-ufv.github.io/atlas-rio-paranaiba/},</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">  langid     = {brazilian},</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">}</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">  doi        = {10.5281/zenodo.23574311},</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">  url        = {https://youthmappers-ufv.github.io/atlas-rio-paranaiba/},</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">  langid     = {brazilian},</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">}</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 </section>
