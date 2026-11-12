@@ -1,0 +1,8 @@
+nome = "Malha de setores censitários do Censo Demográfico 2022"
+orgao = "IBGE"
+url = "https://ftp.ibge.gov.br/Censos/Censo_Demografico_2022/Agregados_por_Setores_Censitarios/malha_com_atributos/setores/gpkg/UF/MG/MG_setores_CD2022.gpkg"
+data_acesso = 2026-11-12
+licenca = "Uso livre com citação da fonte (IBGE: https://www.ibge.gov.br/acesso-informacao/institucional/politica-de-dados-abertos.html)"
+arquivo = "setores.geojson"
+papel = "unidades"
+observacao = "Setores do município 3155504, extraídos da malha de MG por baixar_bases.py. Unidades das comparações por contagem."

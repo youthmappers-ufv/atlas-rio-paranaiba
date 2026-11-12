@@ -1,6 +1,6 @@
 # 3. Educação {.unnumbered}
 
 <!-- Texto da prancha: escrito pela equipe; os mapas e indicadores vêm de _gerado/. -->
-Escolas, creches e instituições de ensino superior no mapa aberto. A completude é medida em relação ao Catálogo de Escolas do INEP, quando a base estiver carregada em `dados/oficiais/inep/`.
+Escolas, creches e instituições de ensino superior no mapa aberto. A completude é medida em relação ao Catálogo de Escolas do INEP: a tabela ao final lista as escolas oficiais ainda sem correspondente no mapa e o motivo provável de cada uma.
 
 {{< include ../_gerado/educacao.md >}}

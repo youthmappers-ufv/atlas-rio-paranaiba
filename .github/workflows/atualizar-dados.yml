@@ -10,7 +10,8 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  actions: write            # para disparar o Verificar no ramo do PR de dados
 
 jobs:
   atualizar:
-    uses: youthmappers-ufv/atlas-motor/.github/workflows/atualizar-dados.yml@v0.12.0
+    uses: youthmappers-ufv/atlas-motor/.github/workflows/atualizar-dados.yml@v0.13.0

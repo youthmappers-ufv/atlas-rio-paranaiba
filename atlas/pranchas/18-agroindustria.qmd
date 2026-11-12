@@ -1,0 +1,11 @@
+# 18. Agroindústria e armazenagem {.unnumbered}
+
+<!-- Texto da prancha: escrito pela equipe do município (o que o mapa mostra, o que chama
+     atenção, o que falta). O include abaixo traz tudo o que o motor gera para o tema: mapas,
+     legenda, indicadores, lacunas e fonte. Para montar a prancha do seu jeito (texto entre
+     as partes, seções, outro tamanho de mapa, imagens próprias), troque o include único por
+     partes de _gerado/agroindustria/: mapa-municipio, mapa-sede, legenda, indicadores, lacunas, fonte.
+     Guia: docs/pranchas.md do atlas-motor. -->
+Silos, armazéns, galpões, cooperativas e áreas industriais ligadas à produção agrícola do município.
+
+{{< include ../_gerado/agroindustria.md >}}

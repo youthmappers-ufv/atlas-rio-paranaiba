@@ -1,0 +1,15 @@
+nome = "Cadastro Nacional de Endereços para Fins Estatísticos (Censo 2022)"
+orgao = "IBGE"
+url = "https://ftp.ibge.gov.br/Cadastro_Nacional_de_Enderecos_para_Fins_Estatisticos/Censo_Demografico_2022/Arquivos_CNEFE/CSV/Municipio/"
+data_acesso = 2026-11-12
+licenca = "Uso livre com citação da fonte (IBGE: https://www.ibge.gov.br/acesso-informacao/institucional/politica-de-dados-abertos.html)"
+arquivo = "enderecos-por-setor.csv"
+comparacao = "contagem"
+unidades = "setores"
+rotulo_oficial = "Endereços (Censo 2022)"
+rotulo_osm = "Edificações no OpenStreetMap"
+observacao = "Contagem dos 10458 endereços do município 3155504 por setor censitário, feita por baixar_bases.py; nenhum endereço é guardado. Cada endereço é contado no setor da malha publicada em que a sua coordenada cai. A comparação usa os endereços existentes (sem os de edificação em construção). Endereço não é edificação: um prédio tem vários endereços, e a razão é uma aproximação."
+
+[colunas]
+unidade = "setor"
+total = "enderecos_existentes"
