@@ -6,6 +6,6 @@
      as partes, seções, outro tamanho de mapa, imagens próprias), troque o include único por
      partes de _gerado/logradouros/: mapa-municipio, mapa-sede, legenda, indicadores, lacunas, fonte.
      Guia: docs/pranchas.md do atlas-motor. -->
-Ruas e avenidas da sede e os endereços com numeração predial. Rua sem nome no mapa não aparece em busca nem em rota: a proporção com nome é o indicador a acompanhar.
+Ruas e avenidas da sede e os endereços com numeração predial. Rua sem nome no mapa não aparece em busca nem em rota. A comparação com a Base de Faces de Logradouros do IBGE aponta os nomes oficiais que ainda não estão no mapa.
 
 {{< include ../_gerado/logradouros.md >}}

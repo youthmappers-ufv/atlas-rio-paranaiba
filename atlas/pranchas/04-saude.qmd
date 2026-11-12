@@ -6,6 +6,6 @@
      as partes, seções, outro tamanho de mapa, imagens próprias), troque o include único por
      partes de _gerado/saude/: mapa-municipio, mapa-sede, legenda, indicadores, lacunas, fonte.
      Guia: docs/pranchas.md do atlas-motor. -->
-Unidades de saúde, hospitais, clínicas e farmácias no mapa aberto. A comparação com o Cadastro Nacional de Estabelecimentos de Saúde (CNES) entra quando a base for carregada em `dados/oficiais/cnes/`; até lá, a prancha mostra só o que está no OpenStreetMap.
+Unidades de saúde, hospitais, clínicas e farmácias no mapa aberto. A comparação é feita com o Cadastro Nacional de Estabelecimentos de Saúde (CNES), que lista também consultórios e clínicas particulares.
 
 {{< include ../_gerado/saude.md >}}

@@ -6,6 +6,6 @@
      as partes, seções, outro tamanho de mapa, imagens próprias), troque o include único por
      partes de _gerado/edificacoes/: mapa-municipio, mapa-sede, legenda, indicadores, lacunas, fonte.
      Guia: docs/pranchas.md do atlas-motor. -->
-Construções desenhadas no OpenStreetMap, na sede e no restante do município. O número de edificações mapeadas, comparado ao de endereços do Censo, é a medida mais direta de quanto da cidade já está no mapa; essa comparação entra quando a base do IBGE for carregada.
+Construções desenhadas no OpenStreetMap, na sede e no restante do município. O número de edificações mapeadas, comparado ao de endereços do Censo, é a medida mais direta de quanto da cidade já está no mapa: a comparação por setor censitário mostra onde falta desenhar.
 
 {{< include ../_gerado/edificacoes.md >}}
