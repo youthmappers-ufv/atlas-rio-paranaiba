@@ -1,0 +1,20 @@
+situacao,numero,codigo_oficial,nome_oficial,objeto_osm,nome_osm,distancia_m,latitude,longitude,motivo_provavel
+so_oficial,1,16489,CONSULTORIO ODONTOLOGICO DRA NATALIA FERREIRA,,,,-19.1964658,-46.2382632,nada deste tema no OSM até 150 m: não mapeado
+so_oficial,2,16535,CONSULTORIO ODONTOLOGICO DRA ANA CLAUDIA,,,,-19.1951207,-46.2416375,"""Moderna Drogaria e Perfumaria"" no OSM a 97 m, com nome diferente (semelhança 0,32): conferir qual é o nome correto"
+so_oficial,3,16616,CONSULTORIO ODONTOLOGICO MICHELLE E GABRIELA,,,,-19.3712759,-46.1311626,nada deste tema no OSM até 150 m: não mapeado
+so_oficial,4,33758,CONSULTORIO ODONTOLOGICO MAYZA FERNANDES,,,,-19.1950409,-46.2408903,"""Moderna Drogaria e Perfumaria"" no OSM a 147 m, com nome diferente (semelhança 0,23): conferir qual é o nome correto"
+so_oficial,5,72567,CLINICA REABILITH,,,,-19.194135,-46.2458387,nada deste tema no OSM até 150 m: não mapeado
+so_oficial,6,752703,CONSULTORIO ODONTOLOGICO DR HELENO C M LEITE,,,,-19.193551,-46.244844,nada deste tema no OSM até 150 m: não mapeado
+so_oficial,7,756377,CLINICA DRA NADIR CRUZ,,,,-19.194837,-46.24167,"""Moderna Drogaria e Perfumaria"" no OSM a 127 m, com nome diferente (semelhança 0,35): conferir qual é o nome correto"
+so_oficial,8,765155,CENTRO DE SAUDE INTEGRADO,,,,-19.3680541,-46.126391,nada deste tema no OSM até 150 m: não mapeado
+so_oficial,9,982784,SECAO DE VIGILANCIA SANITARIA,,,,-19.19591,-46.243058,"""Moderna Drogaria e Perfumaria"" no OSM a 112 m, com nome diferente (semelhança 0,31): conferir qual é o nome correto"
+ambas,,2101165,UNIDADE BASICA DE SAUDE SAO FRANCISCO,way/1327559734,UBS São Francisco,4,-19.196334,-46.2350285,
+ambas,,2101173,UNIDADE BASICA DE SAUDE OLHOS D AGUA,way/1459902820,Unidade Básica de Saúde Olhos D´Água,9,-19.1894338,-46.2481928,
+so_oficial,10,2101181,LABORATORIO REGIONAL DE PROTESE DENTARIA DE RIO PARANAIBA,,,,-19.189603,-46.248369,nada deste tema no OSM até 150 m: não mapeado
+so_osm,,,,node/4929674979,Drogaria Manancial,,-19.1976633,-46.2404506,
+so_osm,,,,way/498972088,,,-19.1930048,-46.24793,
+so_osm,,,,way/502939944,Moderna Drogaria e Perfumaria,,-19.1960137,-46.2419303,
+so_osm,,,,way/1324663219,Entrefarma,,-19.1988622,-46.2363792,
+so_osm,,,,way/1329899070,Drogaria Sousa,,-19.2032174,-46.2456796,
+so_osm,,,,way/1329993778,Unidade Básica de Saúde Novo Horizonte,,-19.2013911,-46.241419,
+so_osm,,,,way/1354931127,Iupharma,,-19.2029668,-46.2436105,

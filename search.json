@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Atlas Colaborativo de Rio Paranaíba",
     "section": "",
-    "text": "Apresentação\nO Atlas Colaborativo de Rio Paranaíba reúne mapas temáticos do município feitos a partir do OpenStreetMap, o mapa livre mantido por voluntários do mundo todo. Cada prancha mostra o que já está no mapa, mede o quanto ele está completo em relação às bases oficiais e aponta as lacunas, que estudantes e comunidade completam em campo e em mapatonas.\nVersão main (motor v0.12.0), com dados do OpenStreetMap de 2026-10-21.\nBaixar o atlas completo em PDF\nO atlas é produzido pelo projeto de extensão Atlas Colaborativo do Município (RAEX PRJ-211/2026), do Programa Youthmappers UFV, na Universidade Federal de Viçosa, Campus Rio Paranaíba, e é atualizado a cada mês.",
+    "text": "Apresentação\nO Atlas Colaborativo de Rio Paranaíba reúne mapas temáticos do município feitos a partir do OpenStreetMap, o mapa livre mantido por voluntários do mundo todo. Cada prancha mostra o que já está no mapa, mede o quanto ele está completo em relação às bases oficiais e aponta as lacunas, que estudantes e comunidade completam em campo e em mapatonas.\nVersão v0.1.1-8-gca09f30 (motor v0.13.0), com dados do OpenStreetMap de 12/11/2026.\nBaixar o atlas completo em PDF\nO atlas é produzido pelo projeto de extensão Atlas Colaborativo do Município (RAEX PRJ-211/2026), do Programa Youthmappers UFV, na Universidade Federal de Viçosa, Campus Rio Paranaíba, e é atualizado a cada mês.",
     "crumbs": [
       "Apresentação"
     ]
@@ -14,7 +14,7 @@
     "href": "index.html#pranchas-desta-edição",
     "title": "Atlas Colaborativo de Rio Paranaíba",
     "section": "Pranchas desta edição",
-    "text": "Pranchas desta edição\n\n\n\nNº\nPrancha\nObjetos no mapa\n\n\n\n\n1\nLocalização e limites\n6\n\n\n3\nEducação\n9",
+    "text": "Pranchas desta edição\n\n\n\nNº\nPrancha\nObjetos no OpenStreetMap\nCom nome\nBase oficial\nEncontrados no mapa\n\n\n\n\n1\nLocalização e limites\n6\n6 (100%)\n—\n—\n\n\n2\nSistema viário\n4.785\n502 (10,5%)\n—\n—\n\n\n3\nEducação\n9\n8 (88,9%)\nINEP\n3 de 15 (20%)\n\n\n4\nSaúde\n9\n8 (88,9%)\nCNES\n2 de 12 (16,7%)\n\n\n5\nEquipamentos e serviços públicos\n53\n17 (32,1%)\n—\n—\n\n\n6\nMeio ambiente\n519\n99 (19,1%)\n—\n—\n\n\n7\nMobilidade e acessibilidade\n36\n0 (0%)\n—\n—\n\n\n8\nÁrea rural\n3.619\n23 (0,6%)\n—\n—\n\n\n9\nCultura, turismo e lazer\n85\n35 (41,2%)\n—\n—\n\n\n10\nHidrografia\n301\n99 (32,9%)\n—\n—\n\n\n11\nUso do solo e agricultura\n411\n3 (0,7%)\n—\n—\n\n\n12\nEdificações\n5.972\n58 (1%)\nIBGE\n5.972 de 10.225 (58,4%)\n\n\n13\nLogradouros e endereços\n1.502\n502 (33,4%)\nIBGE\n150 de 205 (73,2%)\n\n\n14\nBairros, distritos e povoados\n51\n51 (100%)\n—\n—\n\n\n15\nComércio e serviços\n38\n29 (76,3%)\n—\n—\n\n\n16\nAssistência social\n2\n2 (100%)\n—\n—\n\n\n17\nInfraestrutura e saneamento\n313\n4 (1,3%)\n—\n—\n\n\n18\nAgroindústria e armazenagem\n52\n5 (9,6%)\n—\n—",
     "crumbs": [
       "Apresentação"
     ]
@@ -34,7 +34,7 @@
     "href": "metodo.html",
     "title": "Como o atlas é feito",
     "section": "",
-    "text": "Extração. Os dados de cada tema são consultados no OpenStreetMap pela API Overpass e recortados pelo limite do município. Cada extração fica registrada com a data da base do OpenStreetMap.\nCompletude. Nos temas com base oficial (escolas, no Catálogo de Escolas do INEP; saúde, no CNES), mede-se a proporção de itens oficiais que têm correspondente no mapa, a até 150 metros e com nome semelhante, e a proporção dos correspondidos com nome e endereço. Nos demais temas, usam-se indicadores internos, como a proporção de vias com o tipo de pavimento informado.\nMapeamento. Estudantes e voluntários conferem em campo os itens divergentes e corrigem o mapa, sempre manualmente e com as hashtags #youthmappersufv #ymufv-atlas nas edições. As bases oficiais servem só para conferência: nada é copiado delas para o mapa.\nPublicação. O atlas é gerado de novo a cada mês, com os dados atualizados, e cada edição numerada fica disponível para consulta.",
+    "text": "Extração. Os dados de cada tema são consultados no OpenStreetMap pela API Overpass e recortados pelo limite do município. Cada extração fica registrada com a data da base do OpenStreetMap.\nCompletude. Nos temas com base oficial (escolas, no Catálogo de Escolas do INEP; saúde, no CNES), mede-se a proporção de itens oficiais que têm correspondente no mapa, a até 150 metros e com nome semelhante, e a proporção dos correspondidos com nome e endereço. Onde a base oficial dá totais por setor censitário (endereços do Censo), compara-se o número de objetos do mapa com o total oficial de cada setor; onde ela é uma lista de nomes (logradouros), confere-se se cada nome oficial está no mapa. Nos demais temas, usam-se indicadores internos, como a proporção de vias com o tipo de pavimento informado. Em toda prancha os dados mostrados são os do OpenStreetMap; a base oficial entra só como comparação.\nMapeamento. Estudantes e voluntários conferem em campo os itens divergentes e corrigem o mapa, sempre manualmente e com as hashtags #youthmappersufv #ymufv-atlas nas edições. As bases oficiais servem só para conferência: nada é copiado delas para o mapa.\nPublicação. O atlas é gerado de novo a cada mês, com os dados atualizados, e cada edição numerada fica disponível para consulta.",
     "crumbs": [
       "Como o atlas é feito"
     ]
@@ -44,10 +44,21 @@
     "href": "pranchas/01-localizacao.html",
     "title": "1. Localização e limites",
     "section": "",
-    "text": "Rio Paranaíba fica no Alto Paranaíba, em Minas Gerais. O mapa mostra o limite do município no OpenStreetMap, a sede e os povoados e localidades registrados.\n\n\n\nLocalização e limites: município\n\n\nPontos cheios: objetos com nome no mapa; pontos vazados: sem nome.\n\n\n\nIndicador\nValor\n\n\n\n\nObjetos no OpenStreetMap\n6\n\n\nCom nome\n6 (100.0%)\n\n\n\nFonte: OpenStreetMap, dados de 2026-10-21. © colaboradores do OpenStreetMap (ODbL).",
+    "text": "Rio Paranaíba fica no Alto Paranaíba, em Minas Gerais. O mapa mostra o limite do município no OpenStreetMap, a sede e os povoados e localidades registrados.\n\n\n\n\nLocalização e limites: município\n\n\n\n\n\nIndicador\nValor\n\n\n\n\nObjetos no OpenStreetMap\n6\n\n\nCom nome\n6 (100%)\n\n\n\nFonte: OpenStreetMap, dados de 12/11/2026 (© colaboradores do OpenStreetMap (ODbL)).",
     "crumbs": [
       "Pranchas",
       "1. Localização e limites"
+    ]
+  },
+  {
+    "objectID": "pranchas/02-sistema-viario.html",
+    "href": "pranchas/02-sistema-viario.html",
+    "title": "2. Sistema viário",
+    "section": "",
+    "text": "Rodovias, estradas e ruas do município registradas no OpenStreetMap, cortadas no limite municipal. Os indicadores mostram a extensão da rede e quanto dela já tem o tipo de pavimento informado, dado essencial para planejar manutenção e transporte escolar.\n\n\n\n\nSistema viário: município\n\n\n\n\n\nSistema viário: sede do município\n\n\n\n\n\nIndicador\nValor\n\n\n\n\nObjetos no OpenStreetMap\n4785\n\n\nCom nome\n502 (10,5%)\n\n\nComprimento de vias (dentro do município)\n3.018,4 km\n\n\nCom tipo de pavimento informado\n1.445,8 km (47,9%)\n\n\n\nFonte: OpenStreetMap, dados de 12/11/2026 (© colaboradores do OpenStreetMap (ODbL)).",
+    "crumbs": [
+      "Pranchas",
+      "2. Sistema viário"
     ]
   },
   {
@@ -55,10 +66,185 @@
     "href": "pranchas/03-educacao.html",
     "title": "3. Educação",
     "section": "",
-    "text": "Escolas, creches e instituições de ensino superior no mapa aberto. A completude é medida em relação ao Catálogo de Escolas do INEP, quando a base estiver carregada em dados/oficiais/inep/.\n\n\n\nEducação: município\n\n\n\n\n\nEducação: sede do município\n\n\nPontos cheios: objetos com nome no mapa; pontos vazados: sem nome.\n\n\n\nIndicador\nValor\n\n\n\n\nObjetos no OpenStreetMap\n9\n\n\nCom nome\n8 (88.9%)\n\n\nCom endereço (rua)\n0 (0.0%)\n\n\nCom horário de funcionamento\n0 (0.0%)\n\n\nItens na base oficial (Catálogo de Escolas (lista detalhada))\n15\n\n\nCompletude C_t (com correspondente no OSM)\n3 (20.0%)\n\n\nQualidade Q_t (nome e endereço)\n0 (0.0%)\n\n\n\nItens da base oficial sem correspondente no mapa (12):\n\n\n\n\n\n\n\n\nCódigo\nNome\nMotivo provável\n\n\n\n\n31119288\nEM CINCINATO FERREIRA DE AGUIAR\nnada deste tema no OSM até 150 m: não mapeado\n\n\n31119351\nEM SEVERINO JOSE DE FIGUEIREDO\nnada deste tema no OSM até 150 m: não mapeado\n\n\n31119385\nEM JOAO BARBOSA DE BARROS\nnada deste tema no OSM até 150 m: não mapeado\n\n\n31119431\nEM JOAO ANTONIO MENDES\nnada deste tema no OSM até 150 m: não mapeado\n\n\n31212245\nEM PRES TANCREDO NEVES\nobjeto sem nome no OSM a 9 m: provavelmente este, falta o nome\n\n\n31250414\nAPAE ESC SELMA MOREIRA COSTA NOYA\nnada deste tema no OSM até 150 m: não mapeado\n\n\n31288101\nCRECHE MUNICIPAL MARIA MAE DE DEUS\n“Centro Municipal de Educação Infantil Joana Darc” no OSM a 23 m, com nome diferente (semelhança 0,44): conferir qual é o nome correto\n\n\n31288268\nCRECHE MUNICIPAL DE CHAVES\nnada deste tema no OSM até 150 m: não mapeado\n\n\n31288314\nCRECHE MUNICIPAL DE ABAETE DOS MENDES\nnada deste tema no OSM até 150 m: não mapeado\n\n\n31288420\nCRECHE MUN DE RIO PARANAIBA\ncoordenada oficial fora do município\n\n\n31355488\nCENTRO EDUCACIONAL PAULO FREIRE\nnome semelhante no OSM a 826 m (“Centro Educacional Paulo Freire”; limite 150 m): conferir a coordenada oficial e a posição no mapa\n\n\n31381438\nEM PROFESSOR JOSE LUIZ DE ARAUJO\nsem coordenada na base oficial; no OSM há “Escola Estadual Professor José Luiz de Araújo”: conferir se é o mesmo\n\n\n\nFonte: OpenStreetMap, dados de 2026-10-21. © colaboradores do OpenStreetMap (ODbL).",
+    "text": "Escolas, creches e instituições de ensino superior no mapa aberto. A completude é medida em relação ao Catálogo de Escolas do INEP: a tabela ao final lista as escolas oficiais ainda sem correspondente no mapa e o motivo provável de cada uma.\n\n\n\n\nEducação: município\n\n\n\n\n\nEducação: sede do município\n\n\n\n\n\nIndicador\nValor\n\n\n\n\nObjetos no OpenStreetMap\n9\n\n\nCom nome\n8 (88,9%)\n\n\nCom endereço (rua)\n0 (0%)\n\n\nCom horário de funcionamento\n0 (0%)\n\n\nEncontrados na base oficial que têm nome e endereço no mapa\n0 (0%)\n\n\n\n\n\n\nEducação, OpenStreetMap e INEP: município\n\n\n\n\n\nEducação, OpenStreetMap e INEP: sede do município\n\n\n\n\n\nComparação com a base oficial\nQuantidade\n\n\n\n\nItens na base oficial (INEP)\n15\n\n\nObjetos no OpenStreetMap (do tipo que a base cobre)\n7\n\n\nNas duas fontes\n3\n\n\nSó na base oficial (falta no mapa)\n12\n\n\nSó no OpenStreetMap (falta na base ou a conferir)\n4\n\n\nCobertura do mapa (nas duas ÷ base oficial)\n20%\n\n\n\nOutros 2 objeto(s) do tema no OpenStreetMap são de tipos que a base oficial não cobre e ficam fora da comparação.\nSó na base oficial: itens sem correspondente no mapa (12). O número é o do item no mapa de comparação.\n\n\n\n\n\n\n\n\n\nNº\nCódigo\nNome\nMotivo provável\n\n\n\n\n1\n31119288\nEM CINCINATO FERREIRA DE AGUIAR\nnada deste tema no OSM até 150 m: não mapeado\n\n\n2\n31119351\nEM SEVERINO JOSE DE FIGUEIREDO\nnada deste tema no OSM até 150 m: não mapeado\n\n\n3\n31119385\nEM JOAO BARBOSA DE BARROS\nnada deste tema no OSM até 150 m: não mapeado\n\n\n4\n31119431\nEM JOAO ANTONIO MENDES\nnada deste tema no OSM até 150 m: não mapeado\n\n\n5\n31212245\nEM PRES TANCREDO NEVES\nobjeto sem nome no OSM no mesmo lugar: provavelmente este, falta o nome\n\n\n6\n31250414\nAPAE ESC SELMA MOREIRA COSTA NOYA\nnada deste tema no OSM até 150 m: não mapeado\n\n\n7\n31288101\nCRECHE MUNICIPAL MARIA MAE DE DEUS\n“Centro Municipal de Educação Infantil Joana Darc” no OSM no mesmo lugar, com nome diferente (semelhança 0,44): conferir qual é o nome correto\n\n\n8\n31288268\nCRECHE MUNICIPAL DE CHAVES\nnada deste tema no OSM até 150 m: não mapeado\n\n\n9\n31288314\nCRECHE MUNICIPAL DE ABAETE DOS MENDES\nnada deste tema no OSM até 150 m: não mapeado\n\n\n10\n31288420\nCRECHE MUN DE RIO PARANAIBA\ncoordenada oficial fora do município\n\n\n11\n31355488\nCENTRO EDUCACIONAL PAULO FREIRE\nnome semelhante no OSM a 808 m (“Centro Educacional Paulo Freire”; limite 150 m): conferir a coordenada oficial e a posição no mapa\n\n\n12\n31381438\nEM PROFESSOR JOSE LUIZ DE ARAUJO\nsem coordenada na base oficial; no OSM há “Escola Estadual Professor José Luiz de Araújo”: conferir se é o mesmo\n\n\n\nSó no OpenStreetMap: objetos sem item na base oficial (4). Podem ser novos, estar fora do cadastro ou ser erro no mapa: conferir.\n\n\n\nObjeto no OSM\nNome no mapa\n\n\n\n\nway/498972087\nEscola Estadual Professor José Luiz de Araújo\n\n\nway/498972089\nsem nome\n\n\nway/1413046674\nCentro Municipal de Educação Infantil Joana Darc\n\n\nway/1414760195\nCentro Educacional Paulo Freire\n\n\n\nFontes: OpenStreetMap, dados de 12/11/2026 (© colaboradores do OpenStreetMap (ODbL)); INEP, Catálogo de Escolas (lista detalhada), acesso em 22/10/2026.",
     "crumbs": [
       "Pranchas",
       "3. Educação"
+    ]
+  },
+  {
+    "objectID": "pranchas/04-saude.html",
+    "href": "pranchas/04-saude.html",
+    "title": "4. Saúde",
+    "section": "",
+    "text": "Unidades de saúde, hospitais, clínicas e farmácias no mapa aberto. A comparação é feita com o Cadastro Nacional de Estabelecimentos de Saúde (CNES), que lista também consultórios e clínicas particulares.\n\n\n\n\nSaúde: município\n\n\n\n\n\nSaúde: sede do município\n\n\n\n\n\nIndicador\nValor\n\n\n\n\nObjetos no OpenStreetMap\n9\n\n\nCom nome\n8 (88,9%)\n\n\nCom endereço (rua)\n1 (11,1%)\n\n\nCom horário de funcionamento\n0 (0%)\n\n\nEncontrados na base oficial que têm nome e endereço no mapa\n0 (0%)\n\n\n\n\n\n\nSaúde, OpenStreetMap e CNES: município\n\n\n\n\n\nSaúde, OpenStreetMap e CNES: sede do município\n\n\n\n\n\nComparação com a base oficial\nQuantidade\n\n\n\n\nItens na base oficial (CNES)\n12\n\n\nObjetos no OpenStreetMap (do tipo que a base cobre)\n9\n\n\nNas duas fontes\n2\n\n\nSó na base oficial (falta no mapa)\n10\n\n\nSó no OpenStreetMap (falta na base ou a conferir)\n7\n\n\nCobertura do mapa (nas duas ÷ base oficial)\n16,7%\n\n\n\nSó na base oficial: itens sem correspondente no mapa (10). O número é o do item no mapa de comparação.\n\n\n\n\n\n\n\n\n\nNº\nCódigo\nNome\nMotivo provável\n\n\n\n\n1\n16489\nCONSULTORIO ODONTOLOGICO DRA NATALIA FERREIRA\nnada deste tema no OSM até 150 m: não mapeado\n\n\n2\n16535\nCONSULTORIO ODONTOLOGICO DRA ANA CLAUDIA\n“Moderna Drogaria e Perfumaria” no OSM a 97 m, com nome diferente (semelhança 0,32): conferir qual é o nome correto\n\n\n3\n16616\nCONSULTORIO ODONTOLOGICO MICHELLE E GABRIELA\nnada deste tema no OSM até 150 m: não mapeado\n\n\n4\n33758\nCONSULTORIO ODONTOLOGICO MAYZA FERNANDES\n“Moderna Drogaria e Perfumaria” no OSM a 147 m, com nome diferente (semelhança 0,23): conferir qual é o nome correto\n\n\n5\n72567\nCLINICA REABILITH\nnada deste tema no OSM até 150 m: não mapeado\n\n\n6\n752703\nCONSULTORIO ODONTOLOGICO DR HELENO C M LEITE\nnada deste tema no OSM até 150 m: não mapeado\n\n\n7\n756377\nCLINICA DRA NADIR CRUZ\n“Moderna Drogaria e Perfumaria” no OSM a 127 m, com nome diferente (semelhança 0,35): conferir qual é o nome correto\n\n\n8\n765155\nCENTRO DE SAUDE INTEGRADO\nnada deste tema no OSM até 150 m: não mapeado\n\n\n9\n982784\nSECAO DE VIGILANCIA SANITARIA\n“Moderna Drogaria e Perfumaria” no OSM a 112 m, com nome diferente (semelhança 0,31): conferir qual é o nome correto\n\n\n10\n2101181\nLABORATORIO REGIONAL DE PROTESE DENTARIA DE RIO PARANAIBA\nnada deste tema no OSM até 150 m: não mapeado\n\n\n\nSó no OpenStreetMap: objetos sem item na base oficial (7). Podem ser novos, estar fora do cadastro ou ser erro no mapa: conferir.\n\n\n\nObjeto no OSM\nNome no mapa\n\n\n\n\nnode/4929674979\nDrogaria Manancial\n\n\nway/498972088\nsem nome\n\n\nway/502939944\nModerna Drogaria e Perfumaria\n\n\nway/1324663219\nEntrefarma\n\n\nway/1329899070\nDrogaria Sousa\n\n\nway/1329993778\nUnidade Básica de Saúde Novo Horizonte\n\n\nway/1354931127\nIupharma\n\n\n\nFontes: OpenStreetMap, dados de 12/11/2026 (© colaboradores do OpenStreetMap (ODbL)); CNES, Cadastro Nacional de Estabelecimentos de Saúde, acesso em 12/11/2026.",
+    "crumbs": [
+      "Pranchas",
+      "4. Saúde"
+    ]
+  },
+  {
+    "objectID": "pranchas/05-equipamentos.html",
+    "href": "pranchas/05-equipamentos.html",
+    "title": "5. Equipamentos e serviços públicos",
+    "section": "",
+    "text": "Prédios e espaços de uso público na sede: prefeitura, órgãos de governo, segurança, correios, biblioteca, cemitério, praças e áreas de esporte. Endereço e horário de funcionamento indicam o quanto o mapa já serve a quem procura um serviço.\n\n\n\n\nEquipamentos e serviços públicos: sede do município\n\n\n\n\n\nIndicador\nValor\n\n\n\n\nObjetos no OpenStreetMap\n53\n\n\nCom nome\n17 (32,1%)\n\n\nCom endereço (rua)\n4 (7,5%)\n\n\nCom horário de funcionamento\n5 (9,4%)\n\n\n\nFonte: OpenStreetMap, dados de 12/11/2026 (© colaboradores do OpenStreetMap (ODbL)).",
+    "crumbs": [
+      "Pranchas",
+      "5. Equipamentos e serviços públicos"
+    ]
+  },
+  {
+    "objectID": "pranchas/06-meio-ambiente.html",
+    "href": "pranchas/06-meio-ambiente.html",
+    "title": "6. Meio ambiente",
+    "section": "",
+    "text": "Matas, áreas úmidas, corpos d’água e áreas protegidas registradas no OpenStreetMap. A área mapeada mostra o quanto da cobertura natural do município já foi desenhada; o que falta aparece como vazio no mapa.\n\n\n\n\nMeio ambiente: município\n\n\n\n\n\nIndicador\nValor\n\n\n\n\nObjetos no OpenStreetMap\n519\n\n\nCom nome\n99 (19,1%)\n\n\nÁrea mapeada\n5.696,6 ha (4,2% do município)\n\n\n\nFonte: OpenStreetMap, dados de 12/11/2026 (© colaboradores do OpenStreetMap (ODbL)).",
+    "crumbs": [
+      "Pranchas",
+      "6. Meio ambiente"
+    ]
+  },
+  {
+    "objectID": "pranchas/07-mobilidade.html",
+    "href": "pranchas/07-mobilidade.html",
+    "title": "7. Mobilidade e acessibilidade",
+    "section": "",
+    "text": "Pontos de ônibus, estacionamentos, travessias e outros elementos de mobilidade e acessibilidade na sede. É um dos temas com mais a mapear em campo: calçadas, rampas e travessias só entram no mapa com levantamento a pé.\n\n\n\n\nMobilidade e acessibilidade: sede do município\n\n\n\n\n\nIndicador\nValor\n\n\n\n\nObjetos no OpenStreetMap\n36\n\n\nCom nome\n0 (0%)\n\n\n\nFonte: OpenStreetMap, dados de 12/11/2026 (© colaboradores do OpenStreetMap (ODbL)).",
+    "crumbs": [
+      "Pranchas",
+      "7. Mobilidade e acessibilidade"
+    ]
+  },
+  {
+    "objectID": "pranchas/08-area-rural.html",
+    "href": "pranchas/08-area-rural.html",
+    "title": "8. Área rural",
+    "section": "",
+    "text": "Estradas vicinais, comunidades e propriedades rurais. A rede de estradas de terra é a base do escoamento da produção e do transporte escolar; os nomes das comunidades e fazendas, quase sempre ausentes, dependem do conhecimento de quem mora na área.\n\n\n\n\nÁrea rural: município\n\n\n\n\n\nIndicador\nValor\n\n\n\n\nObjetos no OpenStreetMap\n3619\n\n\nCom nome\n23 (0,6%)\n\n\nComprimento de vias (dentro do município)\n2.588,2 km\n\n\nCom tipo de pavimento informado\n1.129,9 km (43,7%)\n\n\n\nFonte: OpenStreetMap, dados de 12/11/2026 (© colaboradores do OpenStreetMap (ODbL)).",
+    "crumbs": [
+      "Pranchas",
+      "8. Área rural"
+    ]
+  },
+  {
+    "objectID": "pranchas/09-cultura-turismo.html",
+    "href": "pranchas/09-cultura-turismo.html",
+    "title": "9. Cultura, turismo e lazer",
+    "section": "",
+    "text": "Igrejas e templos, espaços culturais, praças e áreas de lazer, atrativos naturais, hospedagem e lugares para comer no mapa aberto. É o tema em que o conhecimento de quem mora na cidade mais conta: festas, patrimônio e atrativos só entram no mapa quando alguém os registra.\n\n\n\n\nCultura, turismo e lazer: município\n\n\n\n\n\nCultura, turismo e lazer: sede do município\n\n\n\n\n\nIndicador\nValor\n\n\n\n\nObjetos no OpenStreetMap\n85\n\n\nCom nome\n35 (41,2%)\n\n\nCom endereço (rua)\n8 (9,4%)\n\n\nCom horário de funcionamento\n7 (8,2%)\n\n\n\nFonte: OpenStreetMap, dados de 12/11/2026 (© colaboradores do OpenStreetMap (ODbL)).",
+    "crumbs": [
+      "Pranchas",
+      "9. Cultura, turismo e lazer"
+    ]
+  },
+  {
+    "objectID": "pranchas/10-hidrografia.html",
+    "href": "pranchas/10-hidrografia.html",
+    "title": "10. Hidrografia",
+    "section": "",
+    "text": "Rios, córregos, nascentes, represas e lagos do município. O comprimento com nome mostra quanto da rede de drenagem já está identificada.\n\n\n\n\nHidrografia: município\n\n\n\n\n\nIndicador\nValor\n\n\n\n\nObjetos no OpenStreetMap\n301\n\n\nCom nome\n99 (32,9%)\n\n\nComprimento das linhas (dentro do município)\n433,2 km\n\n\nComprimento com nome\n369,0 km (85,2%)\n\n\nÁrea mapeada\n131,6 ha (0,1% do município)\n\n\n\nFonte: OpenStreetMap, dados de 12/11/2026 (© colaboradores do OpenStreetMap (ODbL)).",
+    "crumbs": [
+      "Pranchas",
+      "10. Hidrografia"
+    ]
+  },
+  {
+    "objectID": "pranchas/11-uso-do-solo.html",
+    "href": "pranchas/11-uso-do-solo.html",
+    "title": "11. Uso do solo e agricultura",
+    "section": "",
+    "text": "Lavouras, pastagens, matas, silvicultura e áreas urbanas e industriais desenhadas no OpenStreetMap. A proporção mapeada do município indica o quanto falta desenhar; os pivôs centrais de irrigação entram como áreas de lavoura.\n\n\n\n\nUso do solo e agricultura: município\n\n\n\n\n\nIndicador\nValor\n\n\n\n\nObjetos no OpenStreetMap\n411\n\n\nCom nome\n3 (0,7%)\n\n\nÁrea mapeada\n8.679,9 ha (6,4% do município)\n\n\n\nFonte: OpenStreetMap, dados de 12/11/2026 (© colaboradores do OpenStreetMap (ODbL)).",
+    "crumbs": [
+      "Pranchas",
+      "11. Uso do solo e agricultura"
+    ]
+  },
+  {
+    "objectID": "pranchas/12-edificacoes.html",
+    "href": "pranchas/12-edificacoes.html",
+    "title": "12. Edificações",
+    "section": "",
+    "text": "Construções desenhadas no OpenStreetMap, na sede e no restante do município. O número de edificações mapeadas, comparado ao de endereços do Censo, é a medida mais direta de quanto da cidade já está no mapa: a comparação por setor censitário mostra onde falta desenhar.\n\n\n\n\nEdificações: município\n\n\n\n\n\nEdificações: sede do município\n\n\n\n\n\nIndicador\nValor\n\n\n\n\nObjetos no OpenStreetMap\n5972\n\n\nCom nome\n58 (1%)\n\n\nÁrea mapeada\n92,8 ha (0,1% do município)\n\n\n\n\n\n\nEdificações, OpenStreetMap e IBGE: município\n\n\n\n\n\nEdificações, OpenStreetMap e IBGE: sede do município\n\n\n\n\n\nComparação com a base oficial\nQuantidade\n\n\n\n\nEndereços (Censo 2022) (IBGE)\n10.225\n\n\nEdificações no OpenStreetMap\n5.972\n\n\nSetores com menos da metade mapeada\n14 de 36\n\n\nRazão do mapa (OpenStreetMap ÷ base oficial)\n58,4%\n\n\n\nSetores censitários, da maior falta para a menor. O número é o do setor no mapa de comparação.\n\n\n\n\n\n\n\n\n\n\n\nNº\nSetor\nSituação\nEndereços (Censo 2022)\nEdificações no OpenStreetMap\nRazão\n\n\n\n\n1\n315550405000031\nUrbana\n611\n0\n0%\n\n\n2\n315550410000003\nRural\n610\n20\n3,3%\n\n\n3\n315550405000032\nUrbana\n407\n1\n0,2%\n\n\n4\n315550405000015\nRural\n405\n70\n17,3%\n\n\n5\n315550410000004\nRural\n312\n1\n0,3%\n\n\n6\n315550410000002\nRural\n358\n50\n14%\n\n\n7\n315550405000038\nRural\n557\n259\n46,5%\n\n\n8\n315550405000010\nRural\n340\n45\n13,2%\n\n\n9\n315550405000012\nRural\n411\n151\n36,7%\n\n\n10\n315550410000001\nUrbana\n228\n4\n1,8%\n\n\n11\n315550405000004\nUrbana\n281\n118\n42%\n\n\n12\n315550405000017\nRural\n236\n81\n34,3%\n\n\n13\n315550405000018\nRural\n288\n168\n58,3%\n\n\n14\n315550405000026\nUrbana\n222\n109\n49,1%\n\n\n15\n315550405000003\nUrbana\n255\n150\n58,8%\n\n\n16\n315550405000013\nRural\n195\n91\n46,7%\n\n\n17\n315550405000006\nUrbana\n258\n164\n63,6%\n\n\n18\n315550405000020\nUrbana\n249\n157\n63,1%\n\n\n19\n315550405000001\nUrbana\n219\n135\n61,6%\n\n\n20\n315550405000022\nUrbana\n261\n190\n72,8%\n\n\n21\n315550405000021\nUrbana\n128\n77\n60,2%\n\n\n22\n315550405000007\nUrbana\n286\n237\n82,9%\n\n\n23\n315550405000019\nUrbana\n171\n135\n78,9%\n\n\n24\n315550405000030\nUrbana\n182\n152\n83,5%\n\n\n25\n315550405000014\nRural\n71\n57\n80,3%\n\n\n26\n315550405000025\nUrbana\n236\n241\n102,1%\n\n\n27\n315550405000023\nUrbana\n61\n80\n131,1%\n\n\n28\n315550405000024\nUrbana\n333\n356\n106,9%\n\n\n29\n315550405000036\nUrbana\n220\n247\n112,3%\n\n\n30\n315550405000039\nUrbana\n70\n100\n142,9%\n\n\n31\n315550405000029\nUrbana\n95\n126\n132,6%\n\n\n32\n315550405000033\nUrbana\n589\n630\n107%\n\n\n33\n315550405000028\nUrbana\n225\n321\n142,7%\n\n\n34\n315550405000035\nUrbana\n223\n326\n146,2%\n\n\n35\n315550405000034\nUrbana\n426\n541\n127%\n\n\n36\n315550405000027\nUrbana\n206\n382\n185,4%\n\n\n\nFontes: OpenStreetMap, dados de 12/11/2026 (© colaboradores do OpenStreetMap (ODbL)); IBGE, Cadastro Nacional de Endereços para Fins Estatísticos (Censo 2022), acesso em 12/11/2026.",
+    "crumbs": [
+      "Pranchas",
+      "12. Edificações"
+    ]
+  },
+  {
+    "objectID": "pranchas/13-logradouros.html",
+    "href": "pranchas/13-logradouros.html",
+    "title": "13. Logradouros e endereços",
+    "section": "",
+    "text": "Ruas e avenidas da sede e os endereços com numeração predial. Rua sem nome no mapa não aparece em busca nem em rota. A comparação com a Base de Faces de Logradouros do IBGE aponta os nomes oficiais que ainda não estão no mapa.\n\n\n\n\nLogradouros e endereços: sede do município\n\n\n\n\n\nIndicador\nValor\n\n\n\n\nObjetos no OpenStreetMap\n1502\n\n\nCom nome\n502 (33,4%)\n\n\nComprimento de vias (dentro do município)\n1.087,4 km\n\n\nCom tipo de pavimento informado\n707,0 km (65%)\n\n\n\n\n\n\nLogradouros e endereços, OpenStreetMap e IBGE: sede do município\n\n\n\n\n\nComparação com a base oficial\nQuantidade\n\n\n\n\nLogradouros com nome na base oficial (IBGE)\n205\n\n\nNomes de via no OpenStreetMap\n243\n\n\nNome nas duas fontes\n150\n\n\nNome só na base oficial (falta no mapa)\n55\n\n\nNome só no OpenStreetMap (falta na base ou a conferir)\n93\n\n\nCobertura do mapa (nas duas ÷ base oficial)\n73,2%\n\n\n\nSó na base oficial: logradouros cujo nome não está no mapa (55).\n\n\n\n\n\n\n\n\n\nNº\nLogradouro\nFaces (km)\nPista\n\n\n\n\n1\nACESSO GUARDA DOS FERREIROS\n0,74\nnenhuma via com este nome no OSM: sem nome no mapa ou não mapeada\n\n\n2\nAVENIDA DOS CAFEICULTORES\n1,02\nnome parecido no OSM: “Avenida dos Cafeicultures” (conferir a grafia)\n\n\n3\nAVENIDA HERMENEGILDO JOSE DE OLIVEIRA\n1,93\nnome parecido no OSM: “Avenida Hermenegildo José Oliveira” (conferir a grafia)\n\n\n4\nAVENIDA JOSE MENDES DA ROCHA\n1,80\nnome parecido no OSM: “Avenida Prefeito José Mendes da Rocha” (conferir a grafia)\n\n\n5\nAVENIDA PARANAIBA\n0,39\nnome parecido no OSM: “Avenida Rio Paranaíba” (conferir a grafia)\n\n\n6\nAVENIDA PAU TERRA\n0,33\nnenhuma via com este nome no OSM: sem nome no mapa ou não mapeada\n\n\n7\nAVENIDA TEODOMIRO RESENDE\n0,11\nnenhuma via com este nome no OSM: sem nome no mapa ou não mapeada\n\n\n8\nAVENIDA TEODOMIRO RESENDE VARGAS\n0,11\nnenhuma via com este nome no OSM: sem nome no mapa ou não mapeada\n\n\n9\nAVENIDA TRAJANO JOSE DA SILVA\n0,90\nnome parecido no OSM: “Avenida Trajano José Silva” (conferir a grafia)\n\n\n10\nPRACA DO ROSARIO\n0,21\nnenhuma via com este nome no OSM: sem nome no mapa ou não mapeada\n\n\n11\nPRACA IMACULADA CONCEICAO\n0,10\nnenhuma via com este nome no OSM: sem nome no mapa ou não mapeada\n\n\n12\nRODOVIA BR 354\n0,63\nnenhuma via com este nome no OSM: sem nome no mapa ou não mapeada\n\n\n13\nRUA 5\n0,28\nnenhuma via com este nome no OSM: sem nome no mapa ou não mapeada\n\n\n14\nRUA A\n1,24\nnenhuma via com este nome no OSM: sem nome no mapa ou não mapeada\n\n\n15\nRUA ABADIA MARIA DA SILVA\n0,33\nnome parecido no OSM: “Rua João Maria da Silva” (conferir a grafia)\n\n\n16\nRUA AGOSTINHO SALU\n0,10\nnenhuma via com este nome no OSM: sem nome no mapa ou não mapeada\n\n\n17\nRUA ALVINO ALASAR MACEDO\n0,45\nnome parecido no OSM: “Rua Alvino Alazar de Macedo” (conferir a grafia)\n\n\n18\nRUA ANTONIO JOAQUIM DE RESENDE TONICO RESENDE\n0,89\nnenhuma via com este nome no OSM: sem nome no mapa ou não mapeada\n\n\n19\nRUA ARISTIDES JOSE DORNELES\n0,43\nnenhuma via com este nome no OSM: sem nome no mapa ou não mapeada\n\n\n20\nRUA AVELINO RODRIGUES DE SOUZA\n0,37\nnome parecido no OSM: “Rua Avelino Rodrigues de Sousa” (conferir a grafia)\n\n\n21\nRUA CLEMENTE SOBRINHO\n0,41\nnome parecido no OSM: “Rua João Clemente Sobrinho” (conferir a grafia)\n\n\n22\nRUA CRISTIANO JOSE DA SILVA\n0,32\nnome parecido no OSM: “Rua Cristalino José da Silva” (conferir a grafia)\n\n\n23\nRUA DAS ORQUIDEAS\n0,42\nnenhuma via com este nome no OSM: sem nome no mapa ou não mapeada\n\n\n24\nRUA DOMICIANO J RESENDE\n0,42\nnome parecido no OSM: “Rua Dominiciano J. Resende” (conferir a grafia)\n\n\n25\nRUA DOS BALSAMOS\n0,50\nnenhuma via com este nome no OSM: sem nome no mapa ou não mapeada\n\n\n26\nRUA DOS JACARANDAS\n0,77\nnome parecido no OSM: “Avenida dos Jacarandás” (conferir a grafia)\n\n\n27\nRUA E\n0,99\nnenhuma via com este nome no OSM: sem nome no mapa ou não mapeada\n\n\n28\nRUA FRANCISCO PAULO MOURA NETO\n0,34\nnome parecido no OSM: “Rua Francisco de Paula Moura Neto” (conferir a grafia)\n\n\n29\nRUA HORIZONTE\n0,09\nnome parecido no OSM: “Rua Horizontes” (conferir a grafia)\n\n\n30\nRUA IRRADIANTES\n0,44\nnenhuma via com este nome no OSM: sem nome no mapa ou não mapeada\n\n\n31\nRUA JOAO CAETANO ROCHA\n0,08\nnome parecido no OSM: “Rua João Caetano da Rocha” (conferir a grafia)\n\n\n32\nRUA JOSE ALAZAR DE MACEDO\n0,13\nnome parecido no OSM: “Rua Alvino Alazar de Macedo” (conferir a grafia)\n\n\n33\nRUA JOSE MARIA MARIANO\n0,65\nnenhuma via com este nome no OSM: sem nome no mapa ou não mapeada\n\n\n34\nRUA JOSE SOUZA BARROS\n0,21\nnome parecido no OSM: “Rua José de Souza Barros” (conferir a grafia)\n\n\n35\nRUA MANOEL PORCINO\n0,22\nnome parecido no OSM: “Rua Manoel Purcina” (conferir a grafia)\n\n\n36\nRUA MINAS GERAIS\n0,28\nnenhuma via com este nome no OSM: sem nome no mapa ou não mapeada\n\n\n37\nRUA PAPAGAIO\n0,16\nnome parecido no OSM: “Rua Paragaio” (conferir a grafia)\n\n\n38\nRUA PAU TERRA\n0,41\nnenhuma via com este nome no OSM: sem nome no mapa ou não mapeada\n\n\n39\nRUA QUATRO\n0,13\nnenhuma via com este nome no OSM: sem nome no mapa ou não mapeada\n\n\n40\nRUA SEBASTIAO ALVES PINTO 2\n0,21\nnome parecido no OSM: “Travessa Sebastião Alves Pinto” (conferir a grafia)\n\n\n41\nRUA SEBASTIAO ALVES PINTO 3\n0,27\nnome parecido no OSM: “Travessa Sebastião Alves Pinto” (conferir a grafia)\n\n\n42\nRUA SEBASTIAO ALVES PINTO 5\n0,26\nnome parecido no OSM: “Travessa Sebastião Alves Pinto” (conferir a grafia)\n\n\n43\nRUA TANCREDO NEVES\n0,45\nnome parecido no OSM: “Rua Tranquedo Neves” (conferir a grafia)\n\n\n44\nRUA VEREADOR ANTONIO AUGUSTO DE CARVALHO\n1,10\nnenhuma via com este nome no OSM: sem nome no mapa ou não mapeada\n\n\n45\nRUA VEREADOR ANTONIO DE CARVALHO\n0,35\nnome parecido no OSM: “Rua Augusto Antônio de Carvalho” (conferir a grafia)\n\n\n46\nRUA VEREADOR AUGUSTO DE CARVALHO\n0,13\nnenhuma via com este nome no OSM: sem nome no mapa ou não mapeada\n\n\n47\nRUA VEREADOR MARIO DA ROCHA FREITAS\n0,53\nnome parecido no OSM: “Rua Mário da Rocha Freitas” (conferir a grafia)\n\n\n48\nRUA VEREADOR SERGIO TEXEIRA\n0,22\nnenhuma via com este nome no OSM: sem nome no mapa ou não mapeada\n\n\n49\nRUA VIGILATO GONCALVES BOAVENTURA\n0,69\nnome parecido no OSM: “Rua Gonçalves Boaventura” (conferir a grafia)\n\n\n50\nRUA X\n1,17\nnenhuma via com este nome no OSM: sem nome no mapa ou não mapeada\n\n\n51\nRUA Y\n0,91\nnenhuma via com este nome no OSM: sem nome no mapa ou não mapeada\n\n\n52\nSAIDA PARA CARMO DO PARANAIBA\n1,17\nnome parecido no OSM: “Rua Carmo do Paranaíba” (conferir a grafia)\n\n\n53\nTRAVESSA DAS OLIVEIRAS\n0,19\nnenhuma via com este nome no OSM: sem nome no mapa ou não mapeada\n\n\n54\nTRAVESSA FRANCISCO PEREIRA DO NASCIMENTO\n0,37\nnome parecido no OSM: “Rua Francisco Pereira do Nascimento” (conferir a grafia)\n\n\n55\nTRAVESSA MANOEL DOS REIS\n0,20\nnome parecido no OSM: “Rua Manoel dos Reis” (conferir a grafia)\n\n\n\nSó no OpenStreetMap: nomes de via sem logradouro igual na base oficial (93). Podem ser vias rurais ou novas, ou grafias diferentes: conferir.\nAlameda das Acácias; Alameda das Quaresmeiras; Alameda dos Buritis; Alameda dos Ipês; Anel Rodoviário; Avenida Adolfo Francisco Gomes; Avenida Hermenegildo José Oliveira; Avenida José Lourenço da Silva; Avenida Maria Marta Borges; Avenida Prefeito José Mendes da Rocha; Avenida Rio Paranaíba; Avenida Trajano José Silva; Avenida Vereador João Antônio Sobrinho; Avenida W; Avenida das Palmeiras; Avenida dos Cafeicultures; Avenida dos Jacarandás; Estrada Paiol; Estrada Paraíso; Praça Hilarino Alves da Rocha; Praça José Anselmo Santana; Praça do Cristo; Rotatória Prefeito Jaime Silva; Rua Agenário Silva; Rua Alvino Alazar de Macedo; Rua Antônio Caetano Vieira; Rua Aristides José da Silva; Rua Arliwan Maciel; Rua Ataliba Silvério da Silva; Rua Augusto Antônio de Carvalho; Rua Avelino Rodrigues de Sousa; Rua B; Rua BelchiorAlexandre da Silva; Rua Carlos José Cândido; Rua Catés; Rua Cecília Amélia Resende; Rua Cristalino José da Silva; Rua Cândido Leandro de Resende; Rua Dominiciano J. Resende; Rua Dona Albina Donancia de Mello. … e mais 53.\nFontes: OpenStreetMap, dados de 12/11/2026 (© colaboradores do OpenStreetMap (ODbL)); IBGE, Base de Faces de Logradouros do Censo Demográfico 2022, acesso em 12/11/2026.",
+    "crumbs": [
+      "Pranchas",
+      "13. Logradouros e endereços"
+    ]
+  },
+  {
+    "objectID": "pranchas/14-bairros-distritos.html",
+    "href": "pranchas/14-bairros-distritos.html",
+    "title": "14. Bairros, distritos e povoados",
+    "section": "",
+    "text": "Bairros, distritos e povoados registrados no OpenStreetMap. Os limites de bairro raramente estão em bases abertas e dependem de consulta à prefeitura e aos moradores.\n\n\n\n\nBairros, distritos e povoados: município\n\n\n\n\n\nBairros, distritos e povoados: sede do município\n\n\n\n\n\nIndicador\nValor\n\n\n\n\nObjetos no OpenStreetMap\n51\n\n\nCom nome\n51 (100%)\n\n\n\nFonte: OpenStreetMap, dados de 12/11/2026 (© colaboradores do OpenStreetMap (ODbL)).",
+    "crumbs": [
+      "Pranchas",
+      "14. Bairros, distritos e povoados"
+    ]
+  },
+  {
+    "objectID": "pranchas/15-comercio-servicos.html",
+    "href": "pranchas/15-comercio-servicos.html",
+    "title": "15. Comércio e serviços",
+    "section": "",
+    "text": "Lojas, bancos, postos de combustível, restaurantes, hospedagem e prestadores de serviço na sede. Nome, endereço e horário são o que torna o mapa útil no dia a dia de moradores e visitantes.\n\n\n\n\nComércio e serviços: sede do município\n\n\n\n\n\nIndicador\nValor\n\n\n\n\nObjetos no OpenStreetMap\n38\n\n\nCom nome\n29 (76,3%)\n\n\nCom endereço (rua)\n4 (10,5%)\n\n\nCom horário de funcionamento\n5 (13,2%)\n\n\n\nFonte: OpenStreetMap, dados de 12/11/2026 (© colaboradores do OpenStreetMap (ODbL)).",
+    "crumbs": [
+      "Pranchas",
+      "15. Comércio e serviços"
+    ]
+  },
+  {
+    "objectID": "pranchas/16-assistencia-social.html",
+    "href": "pranchas/16-assistencia-social.html",
+    "title": "16. Assistência social",
+    "section": "",
+    "text": "Equipamentos da assistência social, como CRAS e CREAS, abrigos, centros comunitários e entidades. A comparação com o cadastro oficial entra quando a base for carregada.\n\n\n\n\nAssistência social: sede do município\n\n\n\n\n\nIndicador\nValor\n\n\n\n\nObjetos no OpenStreetMap\n2\n\n\nCom nome\n2 (100%)\n\n\nCom endereço (rua)\n0 (0%)\n\n\nCom horário de funcionamento\n0 (0%)\n\n\n\nFonte: OpenStreetMap, dados de 12/11/2026 (© colaboradores do OpenStreetMap (ODbL)).",
+    "crumbs": [
+      "Pranchas",
+      "16. Assistência social"
+    ]
+  },
+  {
+    "objectID": "pranchas/17-infraestrutura.html",
+    "href": "pranchas/17-infraestrutura.html",
+    "title": "17. Infraestrutura e saneamento",
+    "section": "",
+    "text": "Linhas e subestações de energia, torres de telecomunicação, reservatórios, estações de tratamento de água e esgoto e pontos de coleta e destinação de resíduos.\n\n\n\n\nInfraestrutura e saneamento: município\n\n\n\n\n\nIndicador\nValor\n\n\n\n\nObjetos no OpenStreetMap\n313\n\n\nCom nome\n4 (1,3%)\n\n\n\nFonte: OpenStreetMap, dados de 12/11/2026 (© colaboradores do OpenStreetMap (ODbL)).",
+    "crumbs": [
+      "Pranchas",
+      "17. Infraestrutura e saneamento"
+    ]
+  },
+  {
+    "objectID": "pranchas/18-agroindustria.html",
+    "href": "pranchas/18-agroindustria.html",
+    "title": "18. Agroindústria e armazenagem",
+    "section": "",
+    "text": "Silos, armazéns, galpões, cooperativas e áreas industriais ligadas à produção agrícola do município.\n\n\n\n\nAgroindústria e armazenagem: município\n\n\n\n\n\nIndicador\nValor\n\n\n\n\nObjetos no OpenStreetMap\n52\n\n\nCom nome\n5 (9,6%)\n\n\n\nFonte: OpenStreetMap, dados de 12/11/2026 (© colaboradores do OpenStreetMap (ODbL)).",
+    "crumbs": [
+      "Pranchas",
+      "18. Agroindústria e armazenagem"
+    ]
+  },
+  {
+    "objectID": "evolucao.html",
+    "href": "evolucao.html",
+    "title": "O mapa em números",
+    "section": "",
+    "text": "Como o mapa do município vem crescendo. Cada coluna é um retrato do OpenStreetMap guardado no repositório do atlas; os números de todos os retratos são recalculados com o método desta edição, para que a comparação entre datas valha.\n\n\n\nPrancha\n21/10/2026\n12/11/2026\n\n\n\n\n1. Localização e limites\n6\n6\n\n\n2. Sistema viário\n4.776\n4.785\n\n\n3. Educação\n9\n9 (20%)\n\n\n4. Saúde\n9\n9 (16,7%)\n\n\n5. Equipamentos e serviços públicos\n53\n53\n\n\n6. Meio ambiente\n527\n519\n\n\n7. Mobilidade e acessibilidade\n36\n36\n\n\n8. Área rural\n3.621\n3.619\n\n\n9. Cultura, turismo e lazer\n85\n85\n\n\n10. Hidrografia\n—\n301\n\n\n11. Uso do solo e agricultura\n—\n411\n\n\n12. Edificações\n—\n5.972 (58,4%)\n\n\n13. Logradouros e endereços\n—\n1.502 (73,2%)\n\n\n14. Bairros, distritos e povoados\n—\n51\n\n\n15. Comércio e serviços\n—\n38\n\n\n16. Assistência social\n—\n2\n\n\n17. Infraestrutura e saneamento\n—\n313\n\n\n18. Agroindústria e armazenagem\n—\n52\n\n\n\nObjetos no OpenStreetMap em cada retrato; entre parênteses, nos temas com base oficial, a proporção dos itens oficiais encontrados no mapa.\nUm traço indica que o tema ainda não era acompanhado naquela data. Crescimento no número de objetos é mapeamento novo; crescimento na proporção encontrada na base oficial é lacuna fechada.",
+    "crumbs": [
+      "O mapa em números"
     ]
   },
   {
@@ -66,7 +252,7 @@
     "href": "dados.html",
     "title": "Dados para download",
     "section": "",
-    "text": "Baixar o atlas completo em PDF\nOs dados de cada prancha estão em GeoJSON (abre no QGIS e em sites de mapas), na mesma versão usada nesta edição do atlas.\n\nLimite do município\nLocalização e limites\nEducação\n\nLicença: os dados derivados do OpenStreetMap seguem a Open Database License (ODbL); cite © colaboradores do OpenStreetMap.",
+    "text": "Baixar o atlas completo em PDF\nOs dados de cada prancha estão em GeoJSON (abre no QGIS e em sites de mapas), na mesma versão usada nesta edição do atlas.\n\nLimite do município\nLocalização e limites\nSistema viário\nEducação\nSaúde\nEquipamentos e serviços públicos\nMeio ambiente\nMobilidade e acessibilidade\nÁrea rural\nCultura, turismo e lazer\nHidrografia\nUso do solo e agricultura\nEdificações\nLogradouros e endereços\nBairros, distritos e povoados\nComércio e serviços\nAssistência social\nInfraestrutura e saneamento\nAgroindústria e armazenagem\nEducação: comparação com a base oficial (mapa)\nEducação: comparação com a base oficial (planilha)\nSaúde: comparação com a base oficial (mapa)\nSaúde: comparação com a base oficial (planilha)\nEdificações: comparação com a base oficial (mapa)\nEdificações: comparação com a base oficial (planilha)\nLogradouros e endereços: comparação com a base oficial (mapa)\nLogradouros e endereços: comparação com a base oficial (planilha)\n\nLicença: os dados derivados do OpenStreetMap seguem a Open Database License (ODbL); cite © colaboradores do OpenStreetMap.",
     "crumbs": [
       "Dados para download"
     ]
