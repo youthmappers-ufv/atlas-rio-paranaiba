@@ -1,54 +1,99 @@
 {
- "base_osm": "2026-11-12T09:24:46Z",
- "gerado_em": "2026-11-12T09:27:19Z",
+ "base_osm": "2026-11-12T09:48:20Z",
+ "gerado_em": "2026-11-12T09:56:21Z",
  "municipio": "Rio Paranaíba",
  "relacao": 314621,
- "servidor": "https://overpass-api.de/api/interpreter",
+ "servidor": "https://overpass.openstreetmap.fr/api/interpreter",
  "temas": {
+  "agroindustria": {
+   "base_osm": "2026-11-01T17:28:34Z",
+   "consulta_sha256": "d75f15a98e9dc424",
+   "feicoes": 52
+  },
   "area-rural": {
-   "base_osm": "2026-11-12T09:23:44Z",
+   "base_osm": "2026-11-12T09:51:21Z",
    "consulta_sha256": "f428eb23f1ac3744",
    "feicoes": 3619
+  },
+  "assistencia-social": {
+   "base_osm": "2026-11-01T17:28:34Z",
+   "consulta_sha256": "17953b1efd5be275",
+   "feicoes": 2
+  },
+  "bairros-distritos": {
+   "base_osm": "2026-11-12T09:54:20Z",
+   "consulta_sha256": "20030678bb2fd57b",
+   "feicoes": 51
+  },
+  "comercio-servicos": {
+   "base_osm": "2026-11-12T09:54:20Z",
+   "consulta_sha256": "5d76eec96bfb0a7b",
+   "feicoes": 38
   },
   "cultura-turismo": {
    "base_osm": "2026-10-31T16:54:06Z",
    "consulta_sha256": "15af4b4c39582531",
    "feicoes": 85
   },
+  "edificacoes": {
+   "base_osm": "2026-11-12T09:52:21Z",
+   "consulta_sha256": "71bc23c3b5f27497",
+   "feicoes": 5972
+  },
   "educacao": {
-   "base_osm": "2026-11-12T09:25:48Z",
+   "base_osm": "2026-11-12T09:49:17Z",
    "consulta_sha256": "5c7f5f690ae0e3c3",
    "feicoes": 9
   },
   "equipamentos": {
-   "base_osm": "2026-10-31T16:54:06Z",
+   "base_osm": "2026-11-12T09:50:21Z",
    "consulta_sha256": "b07e8f5be20fad6e",
    "feicoes": 53
   },
+  "hidrografia": {
+   "base_osm": "2026-11-01T17:28:34Z",
+   "consulta_sha256": "27a76a9e59c90d8b",
+   "feicoes": 301
+  },
+  "infraestrutura": {
+   "base_osm": "2026-11-01T17:28:34Z",
+   "consulta_sha256": "13790d797014d899",
+   "feicoes": 313
+  },
   "localizacao": {
-   "base_osm": "2026-10-31T16:54:06Z",
+   "base_osm": "2026-11-01T17:28:34Z",
    "consulta_sha256": "7317ec533aa64607",
    "feicoes": 6
   },
+  "logradouros": {
+   "base_osm": "2026-11-12T09:53:20Z",
+   "consulta_sha256": "7bd948ece8bfe7e1",
+   "feicoes": 1502
+  },
   "meio-ambiente": {
-   "base_osm": "2026-11-12T09:22:38Z",
+   "base_osm": "2026-11-12T09:51:21Z",
    "consulta_sha256": "18b6201258d3d67d",
    "feicoes": 519
   },
   "mobilidade": {
-   "base_osm": "2026-11-12T09:23:44Z",
+   "base_osm": "2026-11-01T17:28:34Z",
    "consulta_sha256": "11e024446913e039",
    "feicoes": 36
   },
   "saude": {
-   "base_osm": "2026-11-12T09:21:35Z",
+   "base_osm": "2026-11-12T09:49:17Z",
    "consulta_sha256": "424b88217605059e",
    "feicoes": 9
   },
   "sistema-viario": {
-   "base_osm": "2026-10-31T16:54:06Z",
+   "base_osm": "2026-11-12T09:48:20Z",
    "consulta_sha256": "859a3115ab08eb2b",
    "feicoes": 4785
+  },
+  "uso-do-solo": {
+   "base_osm": "2026-11-12T09:52:21Z",
+   "consulta_sha256": "6be9e711887aacdb",
+   "feicoes": 411
   }
  }
 }

@@ -1,0 +1,11 @@
+# 2. Sistema viário {.unnumbered}
+
+<!-- Texto da prancha: escrito pela equipe do município (o que o mapa mostra, o que chama
+     atenção, o que falta). O include abaixo traz tudo o que o motor gera para o tema: mapas,
+     legenda, indicadores, lacunas e fonte. Para montar a prancha do seu jeito (texto entre
+     as partes, seções, outro tamanho de mapa, imagens próprias), troque o include único por
+     partes de _gerado/sistema-viario/: mapa-municipio, mapa-sede, legenda, indicadores, lacunas, fonte.
+     Guia: docs/pranchas.md do atlas-motor. -->
+Rodovias, estradas e ruas do município registradas no OpenStreetMap, cortadas no limite municipal. Os indicadores mostram a extensão da rede e quanto dela já tem o tipo de pavimento informado, dado essencial para planejar manutenção e transporte escolar.
+
+{{< include ../_gerado/sistema-viario.md >}}

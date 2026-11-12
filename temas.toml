@@ -12,3 +12,48 @@ situacao = "em-andamento"
 situacao = "em-andamento"
 
 # [tema.cultura-turismo]: proposta à Secretaria de Cultura, Turismo e Lazer (out/2026); ativar se a parceria avançar.
+
+[tema.sistema-viario]
+situacao = "em-andamento"
+
+[tema.saude]
+situacao = "em-andamento"
+
+[tema.equipamentos]
+situacao = "em-andamento"
+
+[tema.meio-ambiente]
+situacao = "em-andamento"
+
+[tema.mobilidade]
+situacao = "em-andamento"
+
+[tema.area-rural]
+situacao = "em-andamento"
+
+[tema.hidrografia]
+situacao = "em-andamento"
+
+[tema.uso-do-solo]
+situacao = "em-andamento"
+
+[tema.edificacoes]
+situacao = "em-andamento"
+
+[tema.logradouros]
+situacao = "em-andamento"
+
+[tema.bairros-distritos]
+situacao = "em-andamento"
+
+[tema.comercio-servicos]
+situacao = "em-andamento"
+
+[tema.assistencia-social]
+situacao = "em-andamento"
+
+[tema.infraestrutura]
+situacao = "em-andamento"
+
+[tema.agroindustria]
+situacao = "em-andamento"

@@ -1,0 +1,11 @@
+# 6. Meio ambiente {.unnumbered}
+
+<!-- Texto da prancha: escrito pela equipe do município (o que o mapa mostra, o que chama
+     atenção, o que falta). O include abaixo traz tudo o que o motor gera para o tema: mapas,
+     legenda, indicadores, lacunas e fonte. Para montar a prancha do seu jeito (texto entre
+     as partes, seções, outro tamanho de mapa, imagens próprias), troque o include único por
+     partes de _gerado/meio-ambiente/: mapa-municipio, mapa-sede, legenda, indicadores, lacunas, fonte.
+     Guia: docs/pranchas.md do atlas-motor. -->
+Matas, áreas úmidas, corpos d'água e áreas protegidas registradas no OpenStreetMap. A área mapeada mostra o quanto da cobertura natural do município já foi desenhada; o que falta aparece como vazio no mapa.
+
+{{< include ../_gerado/meio-ambiente.md >}}
