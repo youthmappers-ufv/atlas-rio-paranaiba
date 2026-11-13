@@ -51,9 +51,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-2bec29a9bacf2b598905820d71afb463.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-72790666346ca79b951a2a314529d71c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-1ce94ce8b934e3bd282869a273e8df6e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-72790666346ca79b951a2a314529d71c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-e1ea406ac7961ea2fe7c298434232fa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-97bed9c1aa04fd1ca617f028820c9864.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-e1ea406ac7961ea2fe7c298434232fa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -143,6 +143,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../metodo.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Como o atlas é feito</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mapa-geral.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa geral</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -355,15 +361,19 @@ ul.task-list li input[type="checkbox"] {
 
 
 </main> <!-- /main -->
-<!-- Mapa interativo das pranchas (só no site). Cada <div class="atlas-mapa"> gerado por construir.py
-     recebe um mapa Leaflet com os mesmos dados dos mapas do PDF: o tema no OpenStreetMap e, nos temas
-     com base oficial, a comparação das duas fontes. O Leaflet só é carregado nas páginas que têm mapa. -->
+<!-- Mapas interativos do site. Cada <div class="atlas-mapa"> gerado por construir.py recebe um mapa
+     Leaflet com os mesmos dados dos mapas do PDF:
+       - nas pranchas: o tema no OpenStreetMap e, nos temas com base oficial, a comparação das duas fontes;
+       - no Mapa geral (.atlas-mapa-geral): todas as pranchas num mapa só, cada uma numa camada que o
+         leitor marca ou desmarca; o arquivo de um tema só é baixado quando a camada é marcada.
+     O Leaflet só é carregado nas páginas que têm mapa. -->
 <script>
 (function () {
   var caixas = document.querySelectorAll(".atlas-mapa");
   if (!caixas.length) return;
 
   var LEAFLET = "https://unpkg.com/leaflet@1.9.4/dist/";
+  var OSM = "https://www.openstreetmap.org/";
   var FALTA = "#C62828", BORDO = "#7A1C1C", AGUA = "#3A7BD5";
 
   function carregar(pronto) {
@@ -382,131 +392,325 @@ ul.task-list li input[type="checkbox"] {
     document.head.appendChild(js);
   }
 
+  function ler(url) {
+    return fetch(url).then(function (r) { if (!r.ok) throw new Error(url); return r.json(); });
+  }
+
+  function el(tag, classe, texto) {
+    var e = document.createElement(tag);
+    if (classe) e.className = classe;
+    if (texto) e.textContent = texto;
+    return e;
+  }
+
+  // ---------------------------------------------------------------- Fichas (popups)
   // Tudo o que vem dos dados (nomes do OSM e das bases oficiais) entra como texto, nunca como HTML.
-  function ficha(titulo, linhas, link) {
-    var div = document.createElement("div");
-    var h = document.createElement("strong");
-    h.textContent = titulo;
-    div.appendChild(h);
+  // links: [[texto, endereço], ...]; os endereços são montados aqui, nunca lidos dos dados.
+  function ficha(titulo, linhas, links) {
+    var div = el("div");
+    div.appendChild(el("strong", null, titulo));
     linhas.forEach(function (l) {
       if (!l[1]) return;
-      var p = document.createElement("div");
-      var r = document.createElement("span");
-      r.className = "atlas-ficha-rotulo";
-      r.textContent = l[0] + ": ";
-      p.appendChild(r);
+      var p = el("div");
+      p.appendChild(el("span", "atlas-ficha-rotulo", l[0] + ": "));
       p.appendChild(document.createTextNode(l[1]));
       div.appendChild(p);
     });
-    if (link) {
-      var a = document.createElement("a");
-      a.href = "https://www.openstreetmap.org/" + encodeURI(link);
-      a.target = "_blank";
-      a.rel = "noopener";
-      a.textContent = "Ver no OpenStreetMap";
-      div.appendChild(a);
-    }
+    var rodape = el("div", "atlas-ficha-links");
+    (links || []).forEach(function (l) {
+      if (!l[1]) return;
+      var a = el("a", null, l[0]);
+      a.href = l[1];
+      if (l[1].indexOf("http") === 0) { a.target = "_blank"; a.rel = "noopener"; }
+      rodape.appendChild(a);
+    });
+    if (rodape.childNodes.length) div.appendChild(rodape);
     return div;
+  }
+
+  // Editor do OpenStreetMap (iD) no objeto ("way/123") ou, sem objeto, na coordenada.
+  function editor(osm, latlng) {
+    var m = /^(node|way|relation)\/(\d+)$/.exec(osm || "");
+    if (m) return OSM + "edit?editor=id&" + m[1] + "=" + m[2];
+    if (latlng) return OSM + "edit?editor=id#map=19/" + latlng.lat.toFixed(5) + "/" + latlng.lng.toFixed(5);
+    return "";
+  }
+
+  function linksOsm(osm, prancha) {
+    var ok = /^(node|way|relation)\/\d+$/.test(osm || "");
+    return [["Ver no OpenStreetMap", ok ? OSM + osm : ""], ["Editar", editor(osm)], ["Abrir a prancha", prancha || ""]];
   }
 
   var ROTULOS = {"addr:street": "Rua", "addr:housenumber": "Número", "opening_hours": "Horário", "operator": "Responsável",
                  "surface": "Pavimento", "highway": "Tipo de via", "amenity": "Tipo", "shop": "Loja", "landuse": "Uso",
                  "natural": "Natureza", "waterway": "Curso d'água", "place": "Lugar", "building": "Edificação"};
 
-  function fichaOsm(f) {
+  function fichaOsm(f, cfg) {
     var t = f.properties.tags || {};
     var linhas = Object.keys(ROTULOS).filter(function (k) { return t[k]; }).map(function (k) { return [ROTULOS[k], t[k]]; });
-    return ficha(t.name || "Sem nome no mapa", linhas, f.properties.osm);
+    var classe = classeDe(cfg.classes, t);
+    if (classe) linhas.unshift(["Classe", classe[0]]);
+    if (cfg.prancha) linhas.unshift(["Prancha", cfg.titulo]);
+    return ficha(t.name || "Sem nome no mapa", linhas, linksOsm(f.properties.osm, cfg.prancha));
   }
 
-  function ler(url) {
-    return fetch(url).then(function (r) { if (!r.ok) throw new Error(url); return r.json(); });
+  // ---------------------------------------------------------------- Classes de cor (temas.toml: [[tema.classe]])
+  // classes: [[rótulo, cor, ["chave=valor|valor", ...]], ...]; vale a primeira cuja regra casa.
+  function classeDe(classes, tags) {
+    for (var i = 0; i < (classes || []).length; i++) {
+      var regras = classes[i][2];
+      for (var j = 0; j < regras.length; j++) {
+        var p = regras[j].indexOf("="), chave = p < 0 ? regras[j] : regras[j].slice(0, p);
+        if (!(chave in tags)) continue;
+        if (p < 0 || new RegExp("^(?:" + regras[j].slice(p + 1) + ")$").test(tags[chave])) return classes[i];
+      }
+    }
+    return null;
   }
 
-  function montar(caixa) {
-    var d = caixa.dataset, cor = d.cor || "#304068";
-    var mapa = L.map(caixa, {scrollWheelZoom: false});
+  function amostra(cor, vazada) {
+    var s = el("span", "atlas-amostra");
+    s.style.background = vazada ? "transparent" : cor;
+    s.style.borderColor = cor;
+    return s;
+  }
+
+  function listaDeClasses(classes, cor) {
+    var ul = el("div", "atlas-classes");
+    classes.concat([["Outros usos", cor]]).forEach(function (c) {
+      var li = el("div");
+      li.appendChild(amostra(c[1]));
+      li.appendChild(document.createTextNode(c[0]));
+      ul.appendChild(li);
+    });
+    return ul;
+  }
+
+  // ---------------------------------------------------------------- Camadas
+  // O tema no OpenStreetMap. cfg: {cor, forma, titulo, classes, prancha, pane}
+  function camadaDoTema(g, cfg) {
+    var pane = cfg.pane || {};
+    return L.geoJSON(g, {
+      style: function (f) {
+        if (f.geometry.type === "Point") return {};            // o ponto já vem pronto de pointToLayer
+        var t = f.properties.tags || {}, agua = t.waterway || t.natural === "water" || t.natural === "wetland";
+        var area = f.geometry.type.indexOf("Polygon") >= 0, classe = area && !agua ? classeDe(cfg.classes, t) : null;
+        return {color: agua ? AGUA : classe ? classe[1] : cfg.cor, weight: cfg.forma === "pontos" ? 1 : 2,
+                fillOpacity: classe ? 0.6 : 0.35, pane: area ? pane.areas || "overlayPane" : pane.linhas || "overlayPane"};
+      },
+      pointToLayer: function (f, ll) {
+        var comNome = (f.properties.tags || {}).name;
+        return L.circleMarker(ll, {radius: 6, color: comNome ? "#fff" : cfg.cor, weight: comNome ? 1 : 2,
+                                   fillColor: comNome ? cfg.cor : "#fff", fillOpacity: 1, pane: pane.pontos || "markerPane"});
+      },
+      onEachFeature: function (f, camada) { camada.bindPopup(function () { return fichaOsm(f, cfg); }); }
+    });
+  }
+
+  function fichaDeClasse(p) {
+    return p.unidade
+      ? ficha("Setor " + p.unidade, [["Situação", p.situacao], ["Nº na tabela", String(p.n)],
+                                     ["Na base oficial", String(p.oficial)], ["No OpenStreetMap", String(p.osm)],
+                                     ["Razão", p.razao === null ? "" : String(p.razao).replace(".", ",") + "%"]])
+      : ficha(p.nome || "Sem nome na base oficial", [["Situação", p.rotulo]]);
+  }
+
+  // Comparação por contagem (setores) ou por nomes (logradouros): cada feição traz o rótulo e a cor
+  // da sua classe, os mesmos do mapa do PDF. filtro (opcional) escolhe as feições.
+  function camadaDeClasses(g, filtro, pane) {
+    return L.geoJSON(g, {
+      filter: filtro,
+      style: function (f) {
+        var area = f.geometry.type.indexOf("Polygon") >= 0;
+        return {color: f.properties.cor, weight: area ? 1 : 3, fillColor: f.properties.cor, fillOpacity: 0.55,
+                pane: pane || "overlayPane"};
+      },
+      onEachFeature: function (f, c) { c.bindPopup(function () { return fichaDeClasse(f.properties); }); }
+    });
+  }
+
+  var SITUACOES = {
+    ambas: {rotulo: "Nas duas fontes", estilo: function (cor) { return {radius: 6, color: "#fff", weight: 1, fillColor: cor, fillOpacity: 1}; }},
+    so_osm: {rotulo: "Só no OpenStreetMap", estilo: function (cor) { return {radius: 6, color: cor, weight: 2, fillColor: "#fff", fillOpacity: 1}; }},
+    so_oficial: {rotulo: "Só na base oficial (falta no mapa)", estilo: function () { return {radius: 7, color: "#fff", weight: 1, fillColor: FALTA, fillOpacity: 1}; }}
+  };
+
+  // Comparação por itens: os pontos de uma situação. Os que faltam no mapa levam o número da tabela
+  // e, na ficha, o atalho para abrir o editor naquele lugar.
+  function camadaDeItens(g, situacao, cor, pane, prancha) {
+    var grupo = SITUACOES[situacao];
+    return L.geoJSON(g, {
+      filter: function (f) { return f.properties.situacao === situacao; },
+      pointToLayer: function (f, ll) {
+        var estilo = grupo.estilo(cor);
+        if (pane) estilo.pane = pane;
+        return L.circleMarker(ll, estilo);
+      },
+      onEachFeature: function (f, c) {
+        var p = f.properties;
+        c.bindPopup(function () {
+          var links = situacao === "so_oficial"
+            ? [["Mapear aqui (abre o editor)", editor("", c.getLatLng())], ["Abrir a prancha", prancha || ""]]
+            : linksOsm(p.osm, prancha);
+          return ficha(p.nome || "Sem nome", [["Situação", grupo.rotulo], ["Nº na tabela", p.n ? String(p.n) : ""],
+                                              ["Código oficial", p.codigo], ["Motivo provável", p.motivo]], links);
+        });
+        if (p.n) c.bindTooltip(String(p.n), {permanent: true, direction: "right", className: "atlas-numero", offset: [6, 0]});
+      }
+    });
+  }
+
+  function fundo(mapa) {
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">colaboradores do OpenStreetMap</a>'
     }).addTo(mapa);
     mapa.on("click", function () { mapa.scrollWheelZoom.enable(); });   // a roda rola a página até o mapa ser clicado
-    var camadas = L.control.layers(null, null, {collapsed: false}).addTo(mapa);
+  }
 
-    ler(d.limite).then(function (g) {
-      var limite = L.geoJSON(g, {style: {color: BORDO, weight: 2, dashArray: "6 4", fill: false}, interactive: false}).addTo(mapa);
-      mapa.fitBounds(limite.getBounds());
+  function limite(mapa, url) {
+    ler(url).then(function (g) {
+      var camada = L.geoJSON(g, {style: {color: BORDO, weight: 2, dashArray: "6 4", fill: false}, interactive: false}).addTo(mapa);
+      mapa.fitBounds(camada.getBounds());
     }).catch(function () { mapa.setView([-15, -50], 4); });
+  }
+
+  // ---------------------------------------------------------------- Mapa de uma prancha
+  function montar(caixa) {
+    var d = caixa.dataset;
+    var cfg = {cor: d.cor || "#304068", forma: d.forma, titulo: d.titulo || "tema", classes: []};
+    try { cfg.classes = JSON.parse(d.classes || "[]"); } catch (e) { cfg.classes = []; }
+    var mapa = L.map(caixa, {scrollWheelZoom: false});
+    fundo(mapa);
+    var camadas = L.control.layers(null, null, {collapsed: false}).addTo(mapa);
+    limite(mapa, d.limite);
 
     ler(d.tema).then(function (g) {
-      var tema = L.geoJSON(g, {
-        style: function (f) {
-          var t = f.properties.tags || {}, agua = t.waterway || t.natural === "water" || t.natural === "wetland";
-          return {color: agua ? AGUA : cor, weight: d.forma === "pontos" ? 1 : 2, fillOpacity: 0.35};
-        },
-        pointToLayer: function (f, ll) {
-          var comNome = (f.properties.tags || {}).name;
-          return L.circleMarker(ll, {radius: 6, color: comNome ? "#fff" : cor, weight: comNome ? 1 : 2,
-                                     fillColor: comNome ? cor : "#fff", fillOpacity: 1});
-        },
-        onEachFeature: function (f, camada) { camada.bindPopup(function () { return fichaOsm(f); }); }
-      });
-      camadas.addOverlay(tema, "OpenStreetMap: " + (d.titulo || "tema"));
+      var tema = camadaDoTema(g, cfg);
+      camadas.addOverlay(tema, "OpenStreetMap: " + cfg.titulo);
       if (!d.comparacao) tema.addTo(mapa);        // com comparação, o mapa abre nela; o tema fica a um clique
+      if (cfg.classes.length) {
+        var legenda = L.control({position: "bottomleft"});
+        legenda.onAdd = function () {
+          var div = el("div", "atlas-painel atlas-legenda");
+          div.appendChild(listaDeClasses(cfg.classes, cfg.cor));
+          return div;
+        };
+        legenda.addTo(mapa);
+      }
     }).catch(function () { caixa.classList.add("atlas-mapa-indisponivel"); });
 
     if (!d.comparacao) return;
     ler(d.comparacao).then(function (g) {
-      // Comparação por contagem (setores) ou por nomes (logradouros): cada feição traz o rótulo e a
-      // cor da sua classe, os mesmos do mapa do PDF. Uma camada por classe, na ordem do arquivo.
-      if (g.features.length && g.features[0].properties.cor) {
+      if (g.features.length && g.features[0].properties.cor) {     // uma camada por classe, na ordem do arquivo
         var classes = [];
         g.features.forEach(function (f) { if (classes.indexOf(f.properties.rotulo) < 0) classes.push(f.properties.rotulo); });
         classes.forEach(function (rotulo) {
-          var camada = L.geoJSON(g, {
-            filter: function (f) { return f.properties.rotulo === rotulo; },
-            style: function (f) { return {color: f.properties.cor, weight: f.geometry.type.indexOf("Polygon") >= 0 ? 1 : 3,
-                                          fillColor: f.properties.cor, fillOpacity: 0.55}; },
-            onEachFeature: function (f, c) {
-              var p = f.properties;
-              c.bindPopup(function () {
-                return p.unidade
-                  ? ficha("Setor " + p.unidade, [["Situação", p.situacao], ["Nº na tabela", String(p.n)],
-                                                 ["Na base oficial", String(p.oficial)], ["No OpenStreetMap", String(p.osm)],
-                                                 ["Razão", p.razao === null ? "" : String(p.razao).replace(".", ",") + "%"]])
-                  : ficha(p.nome || "Sem nome na base oficial", [["Situação", p.rotulo]]);
-              });
-            }
-          }).addTo(mapa);
-          camadas.addOverlay(camada, rotulo);
+          camadas.addOverlay(camadaDeClasses(g, function (f) { return f.properties.rotulo === rotulo; }).addTo(mapa), rotulo);
         });
         return;
       }
-      var grupos = {
-        ambas: {rotulo: "Nas duas fontes", estilo: {radius: 6, color: "#fff", weight: 1, fillColor: cor, fillOpacity: 1}},
-        so_osm: {rotulo: "Só no OpenStreetMap", estilo: {radius: 6, color: cor, weight: 2, fillColor: "#fff", fillOpacity: 1}},
-        so_oficial: {rotulo: "Só na base oficial (falta no mapa)", estilo: {radius: 7, color: "#fff", weight: 1, fillColor: FALTA, fillOpacity: 1}}
-      };
-      Object.keys(grupos).forEach(function (situacao) {
-        var grupo = grupos[situacao];
-        var camada = L.geoJSON(g, {
-          filter: function (f) { return f.properties.situacao === situacao; },
-          pointToLayer: function (f, ll) { return L.circleMarker(ll, grupo.estilo); },
-          onEachFeature: function (f, c) {
-            var p = f.properties;
-            c.bindPopup(function () {
-              return ficha(p.nome || "Sem nome", [["Situação", grupo.rotulo], ["Nº na tabela", p.n ? String(p.n) : ""],
-                                                  ["Código oficial", p.codigo], ["Motivo provável", p.motivo]], p.osm);
-            });
-            if (p.n) c.bindTooltip(String(p.n), {permanent: true, direction: "right", className: "atlas-numero", offset: [6, 0]});
-          }
-        }).addTo(mapa);
-        camadas.addOverlay(camada, grupo.rotulo);
+      Object.keys(SITUACOES).forEach(function (situacao) {
+        camadas.addOverlay(camadaDeItens(g, situacao, cfg.cor).addTo(mapa), SITUACOES[situacao].rotulo);
       });
     }).catch(function () {});
   }
 
-  carregar(function () { caixas.forEach(montar); });
+  // ---------------------------------------------------------------- Mapa geral
+  // data-indice aponta o índice gerado por construir.py (_gerado/downloads/mapa-geral.json):
+  // {limite, temas: [{id, numero, titulo, cor, forma, arquivo, tamanho, inicial, prancha, classes,
+  //                   comparacao: {arquivo, rotulo, modo}}]}
+  function montarGeral(caixa) {
+    var mapa = L.map(caixa, {scrollWheelZoom: false});
+    fundo(mapa);
+    // Ordem de desenho fixa, qualquer que seja a ordem em que as camadas são marcadas:
+    // áreas embaixo, linhas no meio, pontos em cima e, por último, o que falta no mapa.
+    var panes = {areas: 410, linhas: 420, pontos: 430, lacunas: 440};
+    Object.keys(panes).forEach(function (nome) { mapa.createPane("atlas-" + nome).style.zIndex = panes[nome]; });
+    var pane = {areas: "atlas-areas", linhas: "atlas-linhas", pontos: "atlas-pontos"};
+
+    ler(caixa.dataset.indice).then(function (indice) {
+      limite(mapa, indice.limite);
+      var caixasDeMarcar = [];
+
+      // Uma linha do painel: caixa de marcar que baixa o arquivo na primeira vez e liga ou desliga a camada.
+      function linha(pai, classe, rotulo, cor, nota, fazer, depois) {
+        var label = el("label", classe), caixaDeMarcar = el("input"), camada = null, pedido = null;
+        caixaDeMarcar.type = "checkbox";
+        label.appendChild(caixaDeMarcar);
+        label.appendChild(amostra(cor, classe === "atlas-sub"));
+        label.appendChild(document.createTextNode(rotulo));
+        var aviso = el("small", null, nota);
+        label.appendChild(aviso);
+        pai.appendChild(label);
+        function aplicar() {
+          if (!camada) return;
+          if (caixaDeMarcar.checked) camada.addTo(mapa); else mapa.removeLayer(camada);
+          if (depois) depois(caixaDeMarcar.checked);
+        }
+        caixaDeMarcar.addEventListener("change", function () {
+          if (camada || !caixaDeMarcar.checked) return aplicar();
+          if (pedido) return;
+          aviso.textContent = " carregando…";
+          pedido = fazer().then(function (c) { camada = c; aviso.textContent = nota; aplicar(); })
+                          .catch(function () { aviso.textContent = " indisponível"; caixaDeMarcar.checked = false; caixaDeMarcar.disabled = true; });
+        });
+        caixasDeMarcar.push(caixaDeMarcar);
+        return caixaDeMarcar;
+      }
+
+      var painel = L.control({position: "topright"});
+      painel.onAdd = function () {
+        var div = el("div", "atlas-painel"), cabeca = el("div", "atlas-painel-cabeca");
+        var abrir = el("button", "atlas-painel-botao", "Camadas"), limpar = el("button", "atlas-painel-botao", "Limpar");
+        abrir.type = limpar.type = "button";
+        abrir.setAttribute("aria-expanded", "true");
+        cabeca.appendChild(abrir);
+        cabeca.appendChild(limpar);
+        div.appendChild(cabeca);
+        var lista = el("div", "atlas-painel-lista");
+        div.appendChild(lista);
+        abrir.addEventListener("click", function () {
+          var fechado = lista.classList.toggle("atlas-fechado");
+          abrir.setAttribute("aria-expanded", fechado ? "false" : "true");
+        });
+        limpar.addEventListener("click", function () {
+          caixasDeMarcar.forEach(function (c) { if (c.checked) { c.checked = false; c.dispatchEvent(new Event("change")); } });
+        });
+
+        indice.temas.forEach(function (t) {
+          var cfg = {cor: t.cor, forma: t.forma, titulo: t.titulo, classes: t.classes || [], prancha: t.prancha, pane: pane};
+          var bloco = el("div", "atlas-tema");
+          lista.appendChild(bloco);
+          var classes = cfg.classes.length ? listaDeClasses(cfg.classes, cfg.cor) : null;
+          var marcar = linha(bloco, "", t.numero + ". " + t.titulo, t.cor, t.tamanho ? " (" + t.tamanho + ")" : "",
+                             function () { return ler(t.arquivo).then(function (g) { return camadaDoTema(g, cfg); }); },
+                             function (ligada) { if (classes) classes.classList.toggle("atlas-fechado", !ligada); });
+          if (classes) { classes.classList.add("atlas-fechado"); bloco.appendChild(classes); }
+          if (t.comparacao) {
+            linha(bloco, "atlas-sub", t.comparacao.rotulo, FALTA, "", function () {
+              return ler(t.comparacao.arquivo).then(function (g) {
+                if (t.comparacao.modo === "itens") return camadaDeItens(g, "so_oficial", t.cor, "atlas-lacunas", t.prancha);
+                return camadaDeClasses(g, t.comparacao.modo === "nomes"
+                                           ? function (f) { return f.properties.situacao === "so_oficial"; } : null,
+                                       t.comparacao.modo === "nomes" ? "atlas-lacunas" : "atlas-areas");
+              });
+            });
+          }
+          if (t.inicial) { marcar.checked = true; marcar.dispatchEvent(new Event("change")); }
+        });
+        if (caixa.clientWidth < 640) abrir.click();              // em tela estreita o painel abre fechado
+        L.DomEvent.disableClickPropagation(div);
+        L.DomEvent.disableScrollPropagation(div);
+        return div;
+      };
+      painel.addTo(mapa);
+    }).catch(function () { caixa.classList.add("atlas-mapa-indisponivel"); });
+  }
+
+  carregar(function () {
+    caixas.forEach(function (c) { (c.classList.contains("atlas-mapa-geral") ? montarGeral : montar)(c); });
+  });
 })();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
