@@ -1,0 +1,8 @@
+nome = "Malha estadual (MG), qualidade mínima"
+orgao = "IBGE"
+url = "https://servicodados.ibge.gov.br/api/v3/malhas/estados/MG?formato=application/vnd.geo%2Bjson&qualidade=minima"
+data_acesso = 2026-11-12
+licenca = "Uso livre com citação da fonte (IBGE: https://www.ibge.gov.br/acesso-informacao/institucional/politica-de-dados-abertos.html)"
+arquivo = "uf.geojson"
+papel = "encarte"
+observacao = "Contorno simplificado do estado, usado só no encarte de localização dos mapas (baixar_bases.py)."
